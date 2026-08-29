@@ -1,0 +1,99 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+import CtaBanner from '../components/CtaBanner.astro';
+
+const teamMembers = [
+  {
+    name: "Marcus Vance",
+    title: "Master Refrigeration Technician",
+    experience: "14 Years Experience",
+    bio: "EPA Universal Certified specialist in sealed systems, Sub-Zero, and high-tech smart refrigeration systems.",
+    image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=400&q=80"
+  },
+  {
+    name: "Elena Rodriguez",
+    title: "Lead Laundry Systems Specialist",
+    experience: "10 Years Experience",
+    bio: "Factory certified in Whirlpool, Speed Queen, and LG front-load drive assemblies and electronic control boards.",
+    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80"
+  },
+  {
+    name: "David Sterling",
+    title: "Gas & Electrical Range Specialist",
+    experience: "12 Years Experience",
+    bio: "Certified gas pipefitting and high-voltage oven technician specializing in Wolf, Viking, and GE Profile ranges.",
+    image: "https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=400&q=80"
+  },
+  {
+    name: "Travis Miller",
+    title: "Commercial & Dishwasher Tech",
+    experience: "8 Years Experience",
+    bio: "Specialist in European dishwashers (Bosch/Miele) and commercial restaurant refrigeration equipment across Polk County.",
+    image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80"
+  }
+];
+
+const pageTitle = "Our Certified Technicians | Lakeland Appliance Pro";
+const pageDescription = "Meet the certified master technicians at Lakeland Appliance Pro serving Lakeland, Winter Haven, and Polk County.";
+---
+
+<BaseLayout title={pageTitle} description={pageDescription}>
+  
+  <Breadcrumb items={[{ name: 'Our Team' }]} />
+
+  <section class="bg-brand-teal text-white py-16 lg:py-20 border-b border-teal-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center max-w-3xl">
+      <span class="text-brand-amber text-xs font-bold uppercase tracking-widest bg-teal-800 px-3 py-1 rounded-full border border-teal-600">
+        Licensed Trade Specialists
+      </span>
+      <h1 class="text-4xl sm:text-5xl font-heading font-extrabold text-white tracking-tight mt-3">
+        Meet Our Master Technicians
+      </h1>
+      <p class="text-base text-teal-100/90 leading-relaxed font-normal mt-3">
+        Our team brings decades of combined factory-certified experience to every Polk County home visit.
+      </p>
+    </div>
+  </section>
+
+  <section class="py-16 sm:py-24 bg-white border-b border-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        {teamMembers.map((member) => (
+          <div class="bg-brand-bg rounded-2xl overflow-hidden border border-gray-200 shadow-md hover:shadow-xl transition-all flex flex-col justify-between group">
+            <div>
+              <div class="h-64 overflow-hidden relative bg-slate-800">
+                <img
+                  src={member.image}
+                  alt={member.name}
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  loading="lazy"
+                />
+                <div class="absolute bottom-3 left-3 bg-brand-teal text-brand-amber text-[11px] font-extrabold px-2.5 py-1 rounded-full shadow">
+                  {member.experience}
+                </div>
+              </div>
+              <div class="p-6">
+                <h3 class="text-lg font-heading font-bold text-brand-text mb-1">
+                  {member.name}
+                </h3>
+                <span class="text-xs font-bold text-brand-amber block mb-3">
+                  {member.title}
+                </span>
+                <p class="text-xs text-brand-muted leading-relaxed">
+                  {member.bio}
+                </p>
+              </div>
+            </div>
+            <div class="px-6 pb-6 pt-2 border-t border-gray-200/80 text-[11px] font-semibold text-brand-success flex items-center gap-1.5">
+              <span>✓ Background Checked & FL Licensed</span>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <CtaBanner />
+
+</BaseLayout>

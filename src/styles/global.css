@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    /* scroll-behavior: smooth; Removed per user request to jump directly to pages */
+    font-family: 'Inter', system-ui, sans-serif;
+    color: #1F2A2E;
+    background-color: #FAFAF8;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Manrope', 'Inter', system-ui, sans-serif;
+  }
+}
+
+/* Accordion transition utility */
+.accordion-content {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.3s ease-out;
+}
+
+.accordion-content.is-open {
+  grid-template-rows: 1fr;
+}
+
+.accordion-inner {
+  overflow: hidden;
+}
+
+/* Custom scrollbar for dropdown menus */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #1e293b; /* slate-800 */
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #cbd5e1; /* slate-300 */
+  border-radius: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8; /* slate-400 */
+}

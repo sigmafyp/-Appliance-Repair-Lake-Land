@@ -1,0 +1,81 @@
+---
+const problems = [
+  {
+    title: "Fridge Not Cooling in Florida Heat",
+    description: "High ambient summer humidity and dusty condenser coils force compressors to overheat. We restore rapid chilling and replace failed start relays.",
+    link: "/services/refrigerator-repair",
+    category: "Refrigeration"
+  },
+  {
+    title: "Washer Won't Drain",
+    description: "Clogged drain pumps, failed lid switches, or worn motor belts leave soapy water standing in your drum. We clear obstructions and replace faulty pumps.",
+    link: "/services/washer-repair",
+    category: "Laundry"
+  },
+  {
+    title: "Dryer Not Heating",
+    description: "Blown thermal fuses, burnt heating elements, or lint-choked exhaust vents result in wet clothes after long cycles. We restore full drying heat.",
+    link: "/services/dryer-repair",
+    category: "Laundry"
+  },
+  {
+    title: "Oven Igniter Clicking Continuously",
+    description: "Moisture buildup or worn gas igniters prevent safe gas valve opening. We align burner ports and replace weak igniters for safety.",
+    link: "/services/oven-range-repair",
+    category: "Cooking"
+  },
+  {
+    title: "Dishwasher Leaking onto Kitchen Floor",
+    description: "Deteriorated door seals, cracked tub gaskets, or faulty water inlet valves can damage wood flooring. We replace worn seals and test float switches.",
+    link: "/services/dishwasher-repair",
+    category: "Kitchen"
+  },
+  {
+    title: "Freezer Overworking in Summer Humidity",
+    description: "Defrost timer failures create ice buildup over evaporators, forcing fans to run constantly. We replace defrost thermostats and heaters.",
+    link: "/services/freezer-repair",
+    category: "Refrigeration"
+  }
+];
+---
+
+<section class="py-16 sm:py-24 bg-brand-bg border-b border-gray-100">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <h2 class="text-xs font-bold uppercase tracking-widest text-brand-amber mb-2">Central Florida Climate Impact</h2>
+      <p class="text-3xl sm:text-4xl font-heading font-extrabold text-brand-teal tracking-tight">
+        Common Lakeland Appliance Troubles
+      </p>
+      <p class="mt-4 text-base text-brand-muted">
+        Extreme sub-tropical humidity, storm surges, and intense heat take a toll on home appliances. Recognizing early symptoms saves expensive replacement costs.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {problems.map((p) => (
+        <div class="bg-white rounded-2xl p-7 border border-gray-200/90 shadow-md flex flex-col justify-between hover:shadow-xl transition-all group">
+          <div>
+            <div class="inline-block px-3 py-1 rounded-full bg-teal-50 text-brand-teal text-[11px] font-bold uppercase tracking-wider mb-4">
+              {p.category}
+            </div>
+            <h3 class="text-lg font-heading font-bold text-brand-text mb-3 group-hover:text-brand-teal transition-colors">
+              {p.title}
+            </h3>
+            <p class="text-xs text-brand-muted leading-relaxed mb-6">
+              {p.description}
+            </p>
+          </div>
+          <a
+            href={p.link}
+            class="inline-flex items-center text-xs font-bold text-brand-amber hover:text-brand-amber-hover transition-colors"
+          >
+            <span>Learn More About Repair Solutions</span>
+            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+            </svg>
+          </a>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,88 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/global.css';
+
+export interface Props {
+  title: string;
+  description: string;
+  schema?: object | object[];
+  canonicalUrl?: string;
+}
+
+const { title, description, schema, canonicalUrl } = Astro.props;
+const currentUrl = canonicalUrl || Astro.url.href;
+
+const baseLocalBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": "HomeAndConstructionBusiness",
+  "name": "Lakeland Appliance Pro",
+  "image": "https://lakelandappliancepro.com/images/hero-tech.jpg",
+  "@id": "https://lakelandappliancepro.com/#organization",
+  "url": "https://lakelandappliancepro.com",
+  "telephone": "(863) 555-0123",
+  "priceRange": "$$",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "120 E Pine St, Suite 4",
+    "addressLocality": "Lakeland",
+    "addressRegion": "FL",
+    "postalCode": "33801",
+    "addressCountry": "US"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 28.0437,
+    "longitude": -81.956
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      "opens": "07:00",
+      "closes": "19:00"
+    }
+  ],
+  "areaServed": [
+    "Lakeland", "Winter Haven", "Plant City", "Auburndale", "Mulberry", "Bartow", "Polk County FL"
+  ]
+};
+
+const schemasToInject = schema 
+  ? (Array.isArray(schema) ? [baseLocalBusinessSchema, ...schema] : [baseLocalBusinessSchema, schema])
+  : [baseLocalBusinessSchema];
+---
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+
+    <!-- Title & Meta -->
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={currentUrl} />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={currentUrl} />
+    <meta property="og:site_name" content="Lakeland Appliance Pro" />
+
+    <!-- JSON-LD Schema Markup -->
+    {schemasToInject.map((s) => (
+      <script type="application/ld+json" set:html={JSON.stringify(s)} />
+    ))}
+  </head>
+  <body class="bg-brand-bg text-brand-text flex flex-col min-h-screen font-sans antialiased selection:bg-brand-amber selection:text-white">
+    <Header />
+    <main class="flex-grow">
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>

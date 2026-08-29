@@ -1,0 +1,61 @@
+---
+const areas = [
+  { slug: 'downtown-lakeland', name: 'Downtown Lakeland', zip: '33801', responseTime: '30-60 mins' },
+  { slug: 'south-lakeland', name: 'South Lakeland', zip: '33813', responseTime: '45-60 mins' },
+  { slug: 'winter-haven', name: 'Winter Haven', zip: '33880', responseTime: '45-90 mins' },
+  { slug: 'plant-city', name: 'Plant City', zip: '33563', responseTime: '60-90 mins' },
+  { slug: 'auburndale', name: 'Auburndale', zip: '33823', responseTime: '45-75 mins' },
+  { slug: 'mulberry', name: 'Mulberry', zip: '33860', responseTime: '45-75 mins' },
+  { slug: 'bartow', name: 'Bartow', zip: '33830', responseTime: '60-90 mins' },
+  { slug: 'highland-city', name: 'Highland City', zip: '33846', responseTime: '30-60 mins' },
+  { slug: 'dixieland-lakeland', name: 'Dixieland Lakeland', zip: '33803', responseTime: '30-45 mins' },
+  { slug: 'lake-morton-lakeland', name: 'Lake Morton Lakeland', zip: '33801', responseTime: '30-45 mins' },
+];
+---
+
+<section id="areas" class="py-16 sm:py-24 bg-brand-surface border-b border-gray-200">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <h2 class="text-xs font-bold uppercase tracking-widest text-brand-amber mb-2">Local Coverage Map</h2>
+      <p class="text-3xl sm:text-4xl font-heading font-extrabold text-brand-teal tracking-tight">
+        Serving All Lakeland & Polk County Communities
+      </p>
+      <p class="mt-4 text-base text-brand-muted">
+        Our local service vans are staged across Polk County for rapid dispatch. Select your neighborhood for local repair details.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5">
+      {areas.map((a) => (
+        <a
+          href={`/areas/${a.slug}`}
+          class="bg-white rounded-2xl p-5 border border-gray-200 shadow-sm hover:shadow-lg transition-all flex flex-col justify-between group hover:border-brand-teal"
+        >
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-xs font-mono font-bold text-gray-500 bg-gray-100 px-2 py-0.5 rounded">
+                ZIP {a.zip}
+              </span>
+              <span class="text-[10px] font-bold bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded-full">
+                Available Today
+              </span>
+            </div>
+            <h3 class="text-base font-heading font-bold text-brand-text mb-1 group-hover:text-brand-teal transition-colors">
+              {a.name}
+            </h3>
+            <p class="text-[11px] text-brand-muted mb-4 flex items-center gap-1">
+              <svg class="w-3.5 h-3.5 text-brand-amber" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+              <span>Avg Response: <strong>{a.responseTime}</strong></span>
+            </p>
+          </div>
+          <div class="text-xs font-bold text-brand-amber group-hover:text-brand-amber-hover flex items-center justify-between pt-3 border-t border-gray-100">
+            <span>View Coverage</span>
+            <span class="transform group-hover:translate-x-1 transition-transform">→</span>
+          </div>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>

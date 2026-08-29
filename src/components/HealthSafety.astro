@@ -1,0 +1,63 @@
+---
+const safetyItems = [
+  {
+    title: "Food Safety in Florida Heat",
+    description: "When a refrigerator exceeds 40°F in Central Florida humidity, perishable bacteria multiply rapidly within 2 hours. Prompt cooling repair protects your family from foodborne illness.",
+    icon: "🥗",
+    tag: "Health & Hygiene"
+  },
+  {
+    title: "Mold & Mildew Prevention",
+    description: "Front-load washers and dishwasher door boots harbor dark mildew in humid Polk County climates. Proper pump drainage and gasket replacement prevents toxic spore accumulation.",
+    icon: "🦠",
+    tag: "Indoor Air Quality"
+  },
+  {
+    title: "Dryer Vent Fire Hazard",
+    description: "Accumulated lint trapped inside dryer cabinets or ductwork is a top cause of home fires. Comprehensive thermal fuse and vent cleaning keeps your household safe.",
+    icon: "🔥",
+    tag: "Fire Safety"
+  },
+  {
+    title: "Storm & Hurricane Power Surges",
+    description: "Frequent Lakeland summer lightning strikes send voltage spikes through control boards. We install OEM surge-protected control components to prevent electrical fires.",
+    icon: "⚡",
+    tag: "Electrical Safety"
+  }
+];
+---
+
+<section id="safety" class="py-16 sm:py-24 bg-brand-surface border-b border-gray-200">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <h2 class="text-xs font-bold uppercase tracking-widest text-brand-amber mb-2">Home & Family Protection</h2>
+      <p class="text-3xl sm:text-4xl font-heading font-extrabold text-brand-teal tracking-tight">
+        Local Health & Home Safety Focus
+      </p>
+      <p class="mt-4 text-base text-brand-muted">
+        Beyond convenience, functioning home appliances are essential for health, food preservation, and fire safety in Central Florida.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      {safetyItems.map((item) => (
+        <div class="bg-white rounded-2xl p-7 border border-gray-200/90 shadow-md flex flex-col justify-between hover:shadow-xl transition-all">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-3xl">{item.icon}</span>
+              <span class="text-[10px] font-bold uppercase tracking-wider bg-teal-50 text-brand-teal px-2.5 py-1 rounded-full border border-teal-100">
+                {item.tag}
+              </span>
+            </div>
+            <h3 class="text-lg font-heading font-bold text-brand-text mb-3">
+              {item.title}
+            </h3>
+            <p class="text-xs text-brand-muted leading-relaxed">
+              {item.description}
+            </p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

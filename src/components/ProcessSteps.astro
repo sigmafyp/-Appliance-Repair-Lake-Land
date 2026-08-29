@@ -1,0 +1,67 @@
+---
+const steps = [
+  {
+    step: "01",
+    title: "Call or Request Service",
+    description: "Contact our Lakeland dispatch desk. We note your appliance symptoms and schedule a convenient window."
+  },
+  {
+    step: "02",
+    title: "In-Home Diagnostic",
+    description: "Our certified technician arrives equipped with specialized tools to inspect hardware and isolate the issue."
+  },
+  {
+    step: "03",
+    title: "Clear Flat-Rate Quote",
+    description: "You receive an exact itemized price for parts and labor before any tools touch your machine. No surprises."
+  },
+  {
+    step: "04",
+    title: "Precision OEM Repair",
+    description: "With your approval, we install genuine factory replacement parts directly from our fully stocked service vans."
+  },
+  {
+    step: "05",
+    title: "Final Verification",
+    description: "We run a complete test cycle, clean up the workspace, and provide your written 90-day parts & labor warranty."
+  }
+];
+---
+
+<section id="process" class="py-16 sm:py-24 bg-brand-surface border-b border-gray-200">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <h2 class="text-xs font-bold uppercase tracking-widest text-brand-amber mb-2">Hassle-Free Repair Workflow</h2>
+      <p class="text-3xl sm:text-4xl font-heading font-extrabold text-brand-teal tracking-tight">
+        Our Simple 5-Step Repair Process
+      </p>
+      <p class="mt-4 text-base text-brand-muted">
+        From initial phone call to final test cycle, we keep you informed every step of the way.
+      </p>
+    </div>
+
+    <!-- Timeline Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-5 gap-6 relative">
+      {steps.map((item, index) => (
+        <div class="bg-white rounded-2xl p-6 border border-gray-200/80 shadow-md relative flex flex-col justify-between group hover:-translate-y-2 hover:shadow-xl hover:border-brand-teal transition-all duration-300">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-brand-teal to-teal-700 text-brand-amber font-heading font-extrabold text-lg flex items-center justify-center mb-5 shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300">
+              {item.step}
+            </div>
+            <h3 class="text-base font-heading font-bold text-brand-text mb-2">
+              {item.title}
+            </h3>
+            <p class="text-xs text-brand-muted leading-relaxed">
+              {item.description}
+            </p>
+          </div>
+          {index < steps.length - 1 && (
+            <div class="hidden md:flex absolute -right-4 top-12 w-8 h-8 rounded-full bg-white border border-gray-100 shadow items-center justify-center text-brand-amber font-bold text-lg z-10 pointer-events-none group-hover:bg-brand-amber group-hover:text-white transition-colors duration-300">
+              →
+            </div>
+          )}
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

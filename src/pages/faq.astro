@@ -1,0 +1,99 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+import CtaBanner from '../components/CtaBanner.astro';
+import FaqAccordion from '../components/FaqAccordion.astro';
+
+const schedulingFaqs = [
+  {
+    question: "How do I schedule a same-day appointment in Lakeland?",
+    answer: "Call our direct dispatch desk at (863) 555-0123. Calls placed before 2:00 PM are guaranteed same-day arrival windows."
+  },
+  {
+    question: "What arrival windows do you offer?",
+    answer: "We provide tight 2-hour arrival windows so you don't have to wait home all day. Our technician calls 30 minutes prior to arrival."
+  },
+  {
+    question: "Do you offer weekend or evening emergency service?",
+    answer: "Yes, we dispatch technicians 6 days a week from 7:00 AM to 7:00 PM with emergency dispatch available for urgent refrigeration failures."
+  }
+];
+
+const pricingFaqs = [
+  {
+    question: "How much is your diagnostic service fee?",
+    answer: "Our diagnostic fee is $89. If you proceed with the recommended repair, we waive the diagnostic fee entirely!"
+  },
+  {
+    question: "Do you charge by the hour or flat-rate?",
+    answer: "We strictly use flat-rate upfront pricing based on national trade repair manuals. You know the exact total before work begins."
+  },
+  {
+    question: "What payment methods do you accept upon completion?",
+    answer: "We accept all major credit cards (Visa, MasterCard, Amex, Discover), debit cards, cash, and corporate checks."
+  }
+];
+
+const areaFaqs = [
+  {
+    question: "Which towns in Polk County are covered?",
+    answer: "We cover Lakeland, Winter Haven, Plant City, Auburndale, Mulberry, Bartow, Highland City, Dixieland, Lake Morton, and surrounding unincorporated areas."
+  },
+  {
+    question: "Do you charge extra travel fees for outer Polk County towns?",
+    answer: "No! All towns within our designated Polk County service region pay the standard flat-rate diagnostic fee."
+  },
+  {
+    question: "Can you service rental properties or commercial locations?",
+    answer: "Yes, we work directly with property managers, landlords, and commercial kitchen owners across Polk County."
+  }
+];
+
+const warrantyFaqs = [
+  {
+    question: "What does your 90-day warranty cover?",
+    answer: "Our warranty covers 100% of the replacement parts and labor involved in your original repair. If the part fails within 90 days, we replace it free."
+  },
+  {
+    question: "Are your replacement parts genuine factory OEM?",
+    answer: "Yes, we source original manufacturer parts directly from authorized distributors to protect your appliance warranty."
+  },
+  {
+    question: "What happens if my appliance is not worth repairing?",
+    answer: "Our technician will explain the diagnosis honestly and advise whether replacement makes better financial sense than repair."
+  }
+];
+
+const pageTitle = "Frequently Asked Questions | Lakeland Appliance Pro";
+const pageDescription = "Find clear answers to all questions about scheduling, flat-rate pricing, service areas, and warranties at Lakeland Appliance Pro.";
+---
+
+<BaseLayout title={pageTitle} description={pageDescription}>
+  
+  <Breadcrumb items={[{ name: 'FAQ' }]} />
+
+  <section class="bg-brand-teal text-white py-16 lg:py-20 border-b border-teal-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center max-w-3xl">
+      <span class="text-brand-amber text-xs font-bold uppercase tracking-widest bg-teal-800 px-3 py-1 rounded-full border border-teal-600">
+        Help Center & Answers
+      </span>
+      <h1 class="text-4xl sm:text-5xl font-heading font-extrabold text-white tracking-tight mt-3">
+        Frequently Asked Questions
+      </h1>
+      <p class="text-base text-teal-100/90 leading-relaxed font-normal mt-3">
+        Everything you need to know about our Lakeland appliance repair process.
+      </p>
+    </div>
+  </section>
+
+  <!-- Categorized FAQs -->
+  <div class="space-y-4">
+    <FaqAccordion faqItems={schedulingFaqs} title="1. Scheduling & Dispatch" subtitle="How our appointment windows and same-day scheduling work." />
+    <FaqAccordion faqItems={pricingFaqs} title="2. Pricing & Payments" subtitle="Clear, flat-rate pricing without hidden fees." />
+    <FaqAccordion faqItems={areaFaqs} title="3. Service Area & Coverage" subtitle="Polk County zip codes and regional coverage." />
+    <FaqAccordion faqItems={warrantyFaqs} title="4. Warranty & Parts Quality" subtitle="Our 90-day parts & labor guarantee explained." />
+  </div>
+
+  <CtaBanner />
+
+</BaseLayout>

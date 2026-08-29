@@ -1,0 +1,98 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+import CtaBanner from '../components/CtaBanner.astro';
+
+const pageTitle = "About Us | Lakeland Appliance Pro";
+const pageDescription = "Learn about Lakeland Appliance Pro, Polk County's premier local appliance repair specialists dedicated to fast, honest trade craftsmanship.";
+---
+
+<BaseLayout title={pageTitle} description={pageDescription}>
+  
+  <Breadcrumb items={[{ name: 'About Us' }]} />
+
+  <!-- About Hero -->
+  <section class="bg-brand-teal text-white py-16 lg:py-24 border-b border-teal-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl space-y-4">
+        <span class="text-brand-amber text-xs font-bold uppercase tracking-widest bg-teal-800 px-3 py-1 rounded-full border border-teal-600">
+          Rooted in Central Florida
+        </span>
+        <h1 class="text-4xl sm:text-5xl font-heading font-extrabold text-white tracking-tight">
+          About Lakeland Appliance Pro
+        </h1>
+        <p class="text-lg text-teal-100/90 leading-relaxed font-normal">
+          Building trust one kitchen and laundry room at a time across Lakeland, Winter Haven, and Polk County.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Story & Mission -->
+  <section class="py-16 sm:py-24 bg-white border-b border-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <div class="lg:col-span-6 space-y-6">
+          <h2 class="text-3xl font-heading font-extrabold text-brand-teal">
+            Our Story: Master Trade Skill Meets Florida Hospitality
+          </h2>
+          <p class="text-sm text-brand-muted leading-relaxed">
+            Founded right here in Lakeland, Florida, Lakeland Appliance Pro was established to provide homeowners with an honest, reliable alternative to overpriced factory service networks and unreliable handymen.
+          </p>
+          <p class="text-sm text-brand-muted leading-relaxed">
+            We understand that when your refrigerator stops cooling in the 95°F Central Florida heat or your washer floods the laundry room on a Monday morning, you need immediate, competent assistance from technicians who treat your home with respect.
+          </p>
+          <div class="pt-4 border-t border-gray-200 grid grid-cols-2 gap-6">
+            <div>
+              <span class="text-3xl font-heading font-extrabold text-brand-amber">12+</span>
+              <span class="text-xs font-bold text-brand-text block mt-1">Years Servicing Polk County</span>
+            </div>
+            <div>
+              <span class="text-3xl font-heading font-extrabold text-brand-teal">5,000+</span>
+              <span class="text-xs font-bold text-brand-text block mt-1">Local Repairs Completed</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-6">
+          <div class="bg-brand-bg p-8 rounded-2xl border border-gray-200 shadow-md space-y-6">
+            <h3 class="text-xl font-heading font-bold text-brand-teal">
+              The "Local to Lakeland" Guarantee
+            </h3>
+            <ul class="space-y-4 text-xs text-brand-text">
+              <li class="flex items-start space-x-3">
+                <span class="text-brand-success font-bold text-lg">✓</span>
+                <div>
+                  <strong>Licensed & Insured Trade Professionals:</strong> All technicians undergo strict background checks, trade certification, and ongoing manufacturer training.
+                </div>
+              </li>
+              <li class="flex items-start space-x-3">
+                <span class="text-brand-success font-bold text-lg">✓</span>
+                <div>
+                  <strong>No Hidden Surprises:</strong> You receive an itemized, flat-rate quote before any repair work begins. No hourly billing tricks or surprise trip charges.
+                </div>
+              </li>
+              <li class="flex items-start space-x-3">
+                <span class="text-brand-success font-bold text-lg">✓</span>
+                <div>
+                  <strong>Stocked Mobile Fleet:</strong> Our dispatch trucks carry thousands of common OEM parts to ensure same-day completion for over 85% of service calls.
+                </div>
+              </li>
+              <li class="flex items-start space-x-3">
+                <span class="text-brand-success font-bold text-lg">✓</span>
+                <div>
+                  <strong>90-Day Protection:</strong> Every single repair is backed by our rock-solid 90-day parts and labor guarantee.
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <CtaBanner />
+
+</BaseLayout>

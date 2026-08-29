@@ -1,0 +1,84 @@
+---
+const studies = [
+  {
+    title: "Sub-Zero Refrigerator Compressor Overhaul",
+    location: "Lake Morton Historic District",
+    appliance: "Built-In Refrigerator",
+    image: "https://images.unsplash.com/photo-1584992236310-6edddc08acff?auto=format&fit=crop&w=600&q=80",
+    beforeAfter: "The unit was reading 54°F during a 95°F July heatwave. Our team replaced the failed start capacitor and cleared a heavy condenser lint blockage, restoring crisp 36°F cooling within 3 hours."
+  },
+  {
+    title: "LG Direct Drive Front-Load Washer Bearing Repair",
+    location: "South Lakeland (Carillon Lakes)",
+    appliance: "Washing Machine",
+    image: "https://images.unsplash.com/photo-1626806787461-102c1bfaaea1?auto=format&fit=crop&w=600&q=80",
+    beforeAfter: "Homeowner reported deafening vibration during the high-speed spin cycle. We dismantled the tub, installed new tub seals and heavy-duty steel bearings, bringing whisper-quiet operation back."
+  },
+  {
+    title: "Whirlpool Double Oven Igniter & Calibration",
+    location: "Grasslands Golf & Country Club",
+    appliance: "Gas Oven & Range",
+    image: "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=600&q=80",
+    beforeAfter: "The upper gas oven was clicking for several minutes before lighting with a strong gas smell. We installed a genuine Whirlpool igniter assembly and calibrated thermostat accuracy to within 2 degrees."
+  },
+  {
+    title: "Bosch Silent 800 Series Dishwasher Drain Pump Fix",
+    location: "Winter Haven (Lake Elbert)",
+    appliance: "Dishwasher",
+    image: "https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=600&q=80",
+    beforeAfter: "Standing water and error code E25 prevented full wash cycles. Technician located a foreign seed object jamming the impellers, flushed lines, and restored flawless drainage."
+  }
+];
+---
+
+<section class="py-16 sm:py-24 bg-white border-b border-gray-100">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <h2 class="text-xs font-bold uppercase tracking-widest text-brand-amber mb-2">Proven Track Record</h2>
+      <p class="text-3xl sm:text-4xl font-heading font-extrabold text-brand-teal tracking-tight">
+        Have a Look at Our Recent Work
+      </p>
+      <p class="mt-4 text-base text-brand-muted">
+        Real local repair case studies from homes across Lakeland, Winter Haven, and Polk County.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      {studies.map((item) => (
+        <div class="bg-brand-bg rounded-2xl overflow-hidden border border-gray-200 shadow-md hover:shadow-xl transition-all flex flex-col sm:flex-row group">
+          <div class="sm:w-2/5 relative h-56 sm:h-auto overflow-hidden bg-slate-800">
+            <img
+              src={item.image}
+              alt={item.title}
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              loading="lazy"
+            />
+            <div class="absolute top-3 left-3 bg-brand-teal text-brand-amber text-[10px] font-extrabold uppercase px-2.5 py-1 rounded-full shadow">
+              {item.appliance}
+            </div>
+          </div>
+          <div class="sm:w-3/5 p-6 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center space-x-1 text-xs font-bold text-brand-amber mb-1.5">
+                <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+                </svg>
+                <span>{item.location}</span>
+              </div>
+              <h3 class="text-base font-heading font-bold text-brand-text mb-3 leading-snug">
+                {item.title}
+              </h3>
+              <p class="text-xs text-brand-muted leading-relaxed">
+                {item.beforeAfter}
+              </p>
+            </div>
+            <div class="pt-4 mt-4 border-t border-gray-200/80 flex items-center justify-between text-[11px] font-semibold text-brand-success">
+              <span>✓ Verified Repair Completed</span>
+              <span class="text-gray-400 font-normal">Lakeland, FL</span>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

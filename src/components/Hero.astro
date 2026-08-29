@@ -1,0 +1,118 @@
+---
+export interface Props {
+  heading?: string;
+  subhead?: string;
+  badgeText?: string;
+  image?: string;
+  showBadges?: boolean;
+}
+
+const {
+  heading = "Fast, Reliable Appliance Repair in Lakeland, FL",
+  subhead = "Polk County's most trusted experts for same-day home repairs. Restoring calm and efficiency to your kitchen and laundry room.",
+  badgeText = "Polk County's Top Rated Local Technicians",
+  image = "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=1200&q=80",
+  showBadges = true
+} = Astro.props;
+---
+
+<section class="relative bg-brand-teal text-white overflow-hidden py-16 lg:py-24 border-b border-teal-800">
+  <!-- Subtle Background Ripple Texture Overlay -->
+  <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#F2994A_1px,transparent_1px)] [background-size:24px_24px] pointer-events-none"></div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      
+      <!-- Text & CTA Content -->
+      <div class="lg:col-span-7 space-y-6">
+        <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-teal-800/80 border border-teal-600/50 text-brand-amber text-xs font-semibold tracking-wide uppercase">
+          <svg class="w-4 h-4 text-brand-amber" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+          </svg>
+          <span>{badgeText}</span>
+        </div>
+
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-heading font-extrabold text-white tracking-tight leading-tight">
+          {heading}
+        </h1>
+
+        <p class="text-lg sm:text-xl text-teal-100/90 max-w-2xl font-normal leading-relaxed">
+          {subhead}
+        </p>
+
+        <!-- CTA Action Buttons -->
+        <div class="flex flex-col sm:flex-row items-stretch sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 pt-2">
+          <a
+            href="tel:8635550123"
+            class="inline-flex items-center justify-center px-8 py-4 rounded-full bg-brand-amber text-slate-900 font-extrabold text-base hover:bg-brand-amber-hover transition-all transform hover:-translate-y-0.5 shadow-xl group text-center"
+          >
+            <svg class="w-5 h-5 mr-2.5 text-slate-900 group-hover:animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+            </svg>
+            Call (863) 555-0123 Now
+          </a>
+
+          <a
+            href="/services"
+            class="inline-flex items-center justify-center px-7 py-4 rounded-full bg-teal-800/80 hover:bg-brand-teal-light border border-teal-600/60 text-white font-bold text-base transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:border-teal-400 group text-center"
+          >
+            View Services
+            <svg class="w-4 h-4 ml-2 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </a>
+        </div>
+
+        <!-- 3 Inline Trust Badges -->
+        {showBadges && (
+          <div class="pt-6 grid grid-cols-1 sm:grid-cols-3 gap-3 border-t border-teal-800/80">
+            <div class="flex items-center space-x-2.5 text-xs text-teal-100">
+              <div class="w-6 h-6 rounded-full bg-brand-success/20 flex items-center justify-center text-brand-success flex-shrink-0">
+                ✓
+              </div>
+              <span class="font-semibold">Licensed & Insured</span>
+            </div>
+            <div class="flex items-center space-x-2.5 text-xs text-teal-100">
+              <div class="w-6 h-6 rounded-full bg-brand-amber/20 flex items-center justify-center text-brand-amber flex-shrink-0">
+                ⚡
+              </div>
+              <span class="font-semibold">Same-Day Dispatch</span>
+            </div>
+            <div class="flex items-center space-x-2.5 text-xs text-teal-100">
+              <div class="w-6 h-6 rounded-full bg-amber-400/20 flex items-center justify-center text-amber-300 flex-shrink-0">
+                ★
+              </div>
+              <span class="font-semibold">500+ 5-Star Reviews</span>
+            </div>
+          </div>
+        )}
+      </div>
+
+      <!-- Hero Visual Card -->
+      <div class="lg:col-span-5 relative">
+        <div class="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-teal-700/50 bg-teal-900 group">
+          <img
+            src={image}
+            alt="Lakeland Appliance Pro Certified Repair Technician at Work"
+            class="w-full h-80 lg:h-[420px] object-cover group-hover:scale-105 transition-transform duration-500"
+            loading="eager"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-brand-teal-dark via-transparent to-transparent opacity-80"></div>
+          
+          <div class="absolute bottom-4 left-4 right-4 p-4 rounded-xl bg-brand-teal-dark/90 backdrop-blur border border-teal-700/60 shadow-lg text-xs">
+            <div class="flex items-center justify-between">
+              <div>
+                <span class="text-brand-amber font-bold block text-sm">Lakeland Local Dispatch</span>
+                <span class="text-teal-200">Serving all 10 Polk County Communities</span>
+              </div>
+              <div class="bg-brand-success text-slate-900 font-bold px-2.5 py-1 rounded-full text-[11px]">
+                Available Today
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

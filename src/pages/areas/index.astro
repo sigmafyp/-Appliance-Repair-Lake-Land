@@ -1,0 +1,25 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ServiceAreaGrid from '../../components/ServiceAreaGrid.astro';
+import CtaBanner from '../../components/CtaBanner.astro';
+
+const pageTitle = "Service Areas | Lakeland Appliance Pro";
+const pageDescription = "We provide same-day appliance repair services across Polk County, FL, including Lakeland, Winter Haven, Bartow, and more.";
+---
+
+<BaseLayout title={pageTitle} description={pageDescription}>
+  
+  <section class="bg-brand-teal-dark text-white py-16 md:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1 class="text-4xl md:text-5xl font-extrabold mb-6">Our Service Areas</h1>
+      <p class="text-xl text-teal-100 max-w-3xl mx-auto leading-relaxed">
+        Fast, local appliance repair right in your neighborhood. We cover all of Polk County with quick response times.
+      </p>
+    </div>
+  </section>
+
+  <ServiceAreaGrid />
+
+  <CtaBanner />
+
+</BaseLayout>

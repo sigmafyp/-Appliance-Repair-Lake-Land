@@ -1,0 +1,51 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+
+const pageTitle = "Privacy Policy | Lakeland Appliance Pro";
+const pageDescription = "Privacy policy and data protection standards for Lakeland Appliance Pro customers.";
+---
+
+<BaseLayout title={pageTitle} description={pageDescription}>
+  
+  <Breadcrumb items={[{ name: 'Privacy Policy' }]} />
+
+  <section class="py-16 bg-white border-b border-gray-100">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 prose prose-slate text-sm text-brand-muted">
+      
+      <h1 class="text-3xl font-heading font-extrabold text-brand-teal mb-6">
+        Privacy Policy
+      </h1>
+      <p class="text-xs text-gray-500 mb-8">
+        Last Updated: January 1, 2026
+      </p>
+
+      <h2 class="text-lg font-bold text-brand-text mt-6 mb-2">1. Information We Collect</h2>
+      <p>
+        At Lakeland Appliance Pro, we respect your privacy. When you request appliance repair services or contact us via our website form or telephone dispatch, we collect essential personal information required to deliver local service, including your name, physical address, phone number, email address, and appliance diagnostic details.
+      </p>
+
+      <h2 class="text-lg font-bold text-brand-text mt-6 mb-2">2. How We Use Your Information</h2>
+      <p>
+        We use the information collected solely for dispatching repair technicians, providing cost estimates, scheduling service windows, processing payments, and issuing 90-day warranty verification. We never sell, rent, or trade customer contact details to third-party advertisers.
+      </p>
+
+      <h2 class="text-lg font-bold text-brand-text mt-6 mb-2">3. SMS & Phone Communications</h2>
+      <p>
+        By providing your phone number, you consent to receive transactional phone calls and SMS text messages regarding technician ETA updates and appointment confirmations. You may opt out of non-essential communications at any time.
+      </p>
+
+      <h2 class="text-lg font-bold text-brand-text mt-6 mb-2">4. Data Protection & Security</h2>
+      <p>
+        We implement industry-standard administrative and electronic safeguards to protect customer records against unauthorized access or disclosure.
+      </p>
+
+      <h2 class="text-lg font-bold text-brand-text mt-6 mb-2">5. Contact Information</h2>
+      <p>
+        If you have questions regarding our privacy practices, please contact our administrative desk at 120 E Pine St, Suite 4, Lakeland, FL 33801 or call (863) 555-0123.
+      </p>
+
+    </div>
+  </section>
+
+</BaseLayout>

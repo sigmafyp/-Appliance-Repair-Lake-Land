@@ -1,0 +1,107 @@
+---
+const diyTasks = [
+  {
+    title: "Cleaning Condenser Coils & Vents",
+    desc: "Vacuuming dust off refrigerator coils and clearing lint traps improves airflow and cooling efficiency."
+  },
+  {
+    title: "Replacing Water & Air Filters",
+    desc: "Changing internal refrigerator and microwave filters every 6 months maintains fresh ice and air."
+  },
+  {
+    title: "Leveling Appliance Feet",
+    desc: "Adjusting front leveling legs eliminates washer vibration and ensures proper door sealing."
+  },
+  {
+    title: "Resetting Circuit Breakers",
+    desc: "Checking GFI outlets and main breaker switches after thunderstorm power flickers."
+  }
+];
+
+const proTasks = [
+  {
+    title: "Sealed Refrigerant System Repairs",
+    desc: "R134a/R600a refrigerant handling requires EPA-608 certification, vacuum pumps, and leak detectors."
+  },
+  {
+    title: "High-Voltage Electrical Diagnostics",
+    desc: "240V dryer circuits, oven elements, and main control boards pose severe shock and fire hazards."
+  },
+  {
+    title: "Gas Line & Igniter Replacement",
+    desc: "Repairing natural gas or propane stove valves and igniters demands pressure testing to prevent gas leaks."
+  },
+  {
+    title: "Internal Pump & Motor Replacement",
+    desc: "Disassembling tub bearings, drive belts, and heavy direct-drive motors requires specialized gear pullers."
+  }
+];
+---
+
+<section class="py-16 sm:py-24 bg-white border-b border-gray-100">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <h2 class="text-xs font-bold uppercase tracking-widest text-brand-amber mb-2">Safety & Efficiency Guide</h2>
+      <p class="text-3xl sm:text-4xl font-heading font-extrabold text-brand-teal tracking-tight">
+        DIY Maintenance vs. Certified Trade Professional
+      </p>
+      <p class="mt-4 text-base text-brand-muted">
+        Knowing when to handle simple maintenance yourself and when to call a licensed technician protects your family, property, and appliance warranty.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+      
+      <!-- Safe DIY Column -->
+      <div class="bg-emerald-50/50 rounded-2xl p-8 border border-emerald-100 shadow-md">
+        <div class="flex items-center space-x-3 mb-6">
+          <div class="w-10 h-10 rounded-full bg-brand-success text-white flex items-center justify-center font-bold text-xl shadow">
+            ✓
+          </div>
+          <div>
+            <h3 class="text-xl font-heading font-bold text-emerald-950">Safe DIY Tasks</h3>
+            <span class="text-xs text-emerald-700 font-medium">Routine homeowner maintenance</span>
+          </div>
+        </div>
+
+        <ul class="space-y-5">
+          {diyTasks.map((item) => (
+            <li class="flex items-start space-x-3 bg-white p-4 rounded-xl border border-emerald-100 shadow-sm">
+              <span class="text-brand-success font-bold text-lg leading-none mt-0.5">✓</span>
+              <div>
+                <h4 class="font-bold text-sm text-brand-text mb-1">{item.title}</h4>
+                <p class="text-xs text-brand-muted leading-relaxed">{item.desc}</p>
+              </div>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- Call a Pro Column -->
+      <div class="bg-rose-50/50 rounded-2xl p-8 border border-rose-100 shadow-md">
+        <div class="flex items-center space-x-3 mb-6">
+          <div class="w-10 h-10 rounded-full bg-brand-alert text-white flex items-center justify-center font-bold text-xl shadow">
+            ⚠️
+          </div>
+          <div>
+            <h3 class="text-xl font-heading font-bold text-rose-950">Call a Certified Technician</h3>
+            <span class="text-xs text-rose-700 font-medium">Requires trade certification & tools</span>
+          </div>
+        </div>
+
+        <ul class="space-y-5">
+          {proTasks.map((item) => (
+            <li class="flex items-start space-x-3 bg-white p-4 rounded-xl border border-rose-100 shadow-sm">
+              <span class="text-brand-alert font-bold text-lg leading-none mt-0.5">⚠️</span>
+              <div>
+                <h4 class="font-bold text-sm text-brand-text mb-1">{item.title}</h4>
+                <p class="text-xs text-brand-muted leading-relaxed">{item.desc}</p>
+              </div>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>

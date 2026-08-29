@@ -1,0 +1,212 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+
+const pageTitle = "Contact Us | Lakeland Appliance Pro";
+const pageDescription = "Get in touch with Lakeland Appliance Pro for same-day dispatch. Call (863) 555-0123 or submit an online repair request.";
+---
+
+<BaseLayout title={pageTitle} description={pageDescription}>
+  
+  <Breadcrumb items={[{ name: 'Contact' }]} />
+
+  <section class="bg-brand-teal text-white py-14 lg:py-18 border-b border-teal-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 max-w-3xl text-center">
+      <span class="text-brand-amber text-xs font-bold uppercase tracking-widest bg-teal-800 px-3 py-1 rounded-full border border-teal-600">
+        Direct Dispatch Desk
+      </span>
+      <h1 class="text-4xl sm:text-5xl font-heading font-extrabold text-white tracking-tight mt-3">
+        Contact Lakeland Appliance Pro
+      </h1>
+      <p class="text-base text-teal-100/90 leading-relaxed mt-2">
+        Have an urgent repair request? Call our phone line for immediate dispatch, or send us a message below.
+      </p>
+    </div>
+  </section>
+
+  <section class="py-16 sm:py-24 bg-white border-b border-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+        
+        <!-- Contact Form -->
+        <div class="lg:col-span-7 bg-brand-bg p-8 sm:p-10 rounded-2xl border border-gray-200 shadow-md">
+          <h2 class="text-2xl font-heading font-extrabold text-brand-teal mb-2">
+            Schedule a Repair Visit
+          </h2>
+          <p class="text-xs text-brand-muted mb-8">
+            Fill out your details and appliance symptoms. A dispatch coordinator will call you back within 15 minutes.
+          </p>
+
+          <form id="contact-form" class="space-y-5">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              <div>
+                <label for="contact-name" class="block text-xs font-bold text-brand-text mb-1 uppercase tracking-wider">
+                  Full Name *
+                </label>
+                <input
+                  type="text"
+                  id="contact-name"
+                  required
+                  placeholder="e.g. John Smith"
+                  class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-brand-teal text-sm font-medium"
+                />
+              </div>
+              <div>
+                <label for="contact-phone" class="block text-xs font-bold text-brand-text mb-1 uppercase tracking-wider">
+                  Phone Number *
+                </label>
+                <input
+                  type="tel"
+                  id="contact-phone"
+                  required
+                  placeholder="(863) 555-0000"
+                  class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-brand-teal text-sm font-medium"
+                />
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              <div>
+                <label for="contact-email" class="block text-xs font-bold text-brand-text mb-1 uppercase tracking-wider">
+                  Email Address
+                </label>
+                <input
+                  type="email"
+                  id="contact-email"
+                  placeholder="john@example.com"
+                  class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-brand-teal text-sm font-medium"
+                />
+              </div>
+              <div>
+                <label for="contact-zip" class="block text-xs font-bold text-brand-text mb-1 uppercase tracking-wider">
+                  Polk County Zip Code *
+                </label>
+                <input
+                  type="text"
+                  id="contact-zip"
+                  required
+                  placeholder="e.g. 33801"
+                  class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-brand-teal text-sm font-medium"
+                />
+              </div>
+            </div>
+
+            <div>
+              <label for="contact-appliance" class="block text-xs font-bold text-brand-text mb-1 uppercase tracking-wider">
+                Appliance Type & Brand
+              </label>
+              <select
+                id="contact-appliance"
+                class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-brand-teal text-sm font-medium bg-white"
+              >
+                <option value="Refrigerator">Refrigerator / Freezer</option>
+                <option value="Washer">Washing Machine</option>
+                <option value="Dryer">Clothes Dryer</option>
+                <option value="Oven">Oven / Range / Stove</option>
+                <option value="Dishwasher">Dishwasher</option>
+                <option value="Commercial">Commercial Equipment</option>
+                <option value="Other">Other Household Appliance</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="contact-message" class="block text-xs font-bold text-brand-text mb-1 uppercase tracking-wider">
+                Describe the Issue / Symptoms
+              </label>
+              <textarea
+                id="contact-message"
+                rows="4"
+                placeholder="Describe what is happening (e.g. fridge making clicking sound, washer not draining water)..."
+                class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-brand-teal text-sm font-medium"
+              ></textarea>
+            </div>
+
+            <button
+              type="submit"
+              class="w-full py-4 rounded-xl bg-brand-amber text-slate-900 font-extrabold text-base hover:bg-brand-amber-hover transition-colors shadow-md"
+            >
+              Submit Dispatch Request
+            </button>
+
+            <div id="contact-success" class="hidden p-4 bg-emerald-50 text-emerald-800 rounded-xl text-xs font-bold border border-emerald-200">
+              ✓ Thank you! Your request has been sent to our Lakeland dispatch team. We will call you at the number provided shortly.
+            </div>
+          </form>
+        </div>
+
+        <!-- Info & Map -->
+        <div class="lg:col-span-5 space-y-8">
+          <div class="bg-brand-teal text-white p-8 rounded-2xl shadow-md space-y-6">
+            <h3 class="text-xl font-heading font-extrabold text-white">
+              Direct Contact Details
+            </h3>
+
+            <div class="space-y-4 text-xs text-teal-100">
+              <div class="flex items-start space-x-3">
+                <svg class="w-5 h-5 text-brand-amber flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                </svg>
+                <div>
+                  <span class="font-bold text-white block">Immediate Phone Line:</span>
+                  <a href="tel:8635550123" class="text-brand-amber text-lg font-extrabold hover:underline">(863) 555-0123</a>
+                </div>
+              </div>
+
+              <div class="flex items-start space-x-3">
+                <svg class="w-5 h-5 text-brand-amber flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                </svg>
+                <div>
+                  <span class="font-bold text-white block">Central Office:</span>
+                  <span>120 E Pine St, Suite 4, Lakeland, FL 33801</span>
+                </div>
+              </div>
+
+              <div class="flex items-start space-x-3">
+                <svg class="w-5 h-5 text-brand-amber flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+                <div>
+                  <span class="font-bold text-white block">Dispatch Operating Hours:</span>
+                  <span>Monday – Saturday: 7:00 AM – 7:00 PM</span><br/>
+                  <span class="text-brand-amber font-medium">Sunday: Emergency Dispatch Only</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Embedded Map Placeholder Visual -->
+          <div class="rounded-2xl overflow-hidden border border-gray-200 shadow-md bg-slate-800 text-white p-6 relative flex flex-col justify-between h-64">
+            <div class="absolute inset-0 bg-brand-teal opacity-90"></div>
+            <div class="relative z-10 space-y-2">
+              <span class="text-brand-amber text-xs font-bold uppercase tracking-wider">Lakeland Headquarters</span>
+              <h4 class="font-heading font-extrabold text-lg">Serving Downtown Lakeland & Polk County</h4>
+              <p class="text-xs text-teal-100">120 E Pine St, Lakeland, FL 33801</p>
+            </div>
+            <div class="relative z-10 pt-4 flex justify-between items-end text-xs font-mono text-teal-200">
+              <span>LAT: 28.0437° N</span>
+              <span>LONG: 81.9560° W</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('contact-form') as HTMLFormElement | null;
+    const successMsg = document.getElementById('contact-success');
+
+    if (form && successMsg) {
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        successMsg.classList.remove('hidden');
+        form.reset();
+      });
+    }
+  });
+</script>

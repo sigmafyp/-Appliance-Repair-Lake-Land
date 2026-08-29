@@ -1,0 +1,66 @@
+---
+const features = [
+  {
+    title: "Same-Day Dispatch",
+    description: "When your refrigerator or washer breaks, every hour matters. We prioritize urgent service calls to restore function on the same day.",
+    icon: "M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+  },
+  {
+    title: "Local Lakeland Technicians",
+    description: "Our certified technicians live right here in Polk County. We know local neighborhoods and arrive quickly equipped with genuine factory parts.",
+    icon: "M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+  },
+  {
+    title: "Transparent Upfront Pricing",
+    description: "No hidden fees or unexpected charges after the job is completed. You receive a comprehensive quote before any work begins.",
+    icon: "M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+  },
+  {
+    title: "100% Satisfaction Guarantee",
+    description: "We back every repair with our 90-day parts and labor warranty. If the issue recurs within the warranty window, we fix it at zero extra cost.",
+    icon: "M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+  },
+  {
+    title: "Licensed & Fully Insured",
+    description: "Rest easy knowing your home and appliances are in qualified, insured hands. We adhere strictly to EPA and Florida safety protocols.",
+    icon: "M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+  },
+  {
+    title: "Honest Diagnostics First",
+    description: "If an older unit is beyond repair or unviable to fix, we tell you upfront rather than taking your money for temporary fixes.",
+    icon: "M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"
+  }
+];
+---
+
+<section class="py-16 sm:py-20 bg-brand-bg">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-3xl mx-auto mb-14">
+      <h2 class="text-xs font-bold uppercase tracking-widest text-brand-amber mb-2">Why Polk County Trusts Us</h2>
+      <p class="text-3xl sm:text-4xl font-heading font-extrabold text-brand-teal tracking-tight">
+        Engineered for Speed, Precision, & Peace of Mind
+      </p>
+      <p class="mt-4 text-base text-brand-muted">
+        We combine master trade technical skill with honest Florida hospitality. Here is why homeowners and landlords choose Lakeland Appliance Pro.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {features.map((item) => (
+        <div class="bg-white rounded-2xl p-8 border border-gray-100 shadow-md hover:shadow-xl transition-all transform hover:-translate-y-1 group">
+          <div class="w-12 h-12 rounded-xl bg-teal-50 text-brand-teal flex items-center justify-center mb-6 group-hover:bg-brand-amber group-hover:text-slate-900 transition-colors">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={item.icon}/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-heading font-bold text-brand-text mb-3">
+            {item.title}
+          </h3>
+          <p class="text-sm text-brand-muted leading-relaxed">
+            {item.description}
+          </p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

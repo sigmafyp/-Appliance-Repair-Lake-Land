@@ -1,0 +1,129 @@
+---
+const services = [
+  {
+    slug: 'refrigerator-repair',
+    name: 'Refrigerator Repair',
+    description: 'Expert diagnostics for cooling failures, compressor issues, and water dispenser leaks.',
+    icon: '🧊'
+  },
+  {
+    slug: 'freezer-repair',
+    name: 'Freezer Repair',
+    description: 'Fast repair for frost buildup, click-on start relays, and temp fluctuations.',
+    icon: '❄️'
+  },
+  {
+    slug: 'washer-repair',
+    name: 'Washer Repair',
+    description: 'Resolving spin cycle failures, standing water, violent vibration, and door locks.',
+    icon: '🧺'
+  },
+  {
+    slug: 'dryer-repair',
+    name: 'Dryer Repair',
+    description: 'Fixing no-heat symptoms, broken drive belts, thermal fuses, and loud squeaking.',
+    icon: '🔥'
+  },
+  {
+    slug: 'oven-range-repair',
+    name: 'Oven & Range Repair',
+    description: 'Calibrating uneven temperatures, faulty igniters, element burnt-outs, and control boards.',
+    icon: '🍳'
+  },
+  {
+    slug: 'stove-repair',
+    name: 'Stove Repair',
+    description: 'Gas valve repairs, electric burner replacement, and spark module troubleshooting.',
+    icon: '⚡'
+  },
+  {
+    slug: 'cooktop-repair',
+    name: 'Cooktop Repair',
+    description: 'Smooth-top glass burner fixes, induction zone repairs, and surface controls.',
+    icon: '🍳'
+  },
+  {
+    slug: 'dishwasher-repair',
+    name: 'Dishwasher Repair',
+    description: 'Fixing cloudy glassware, spray arm clogs, door latch leaks, and pump drains.',
+    icon: '🍽️'
+  },
+  {
+    slug: 'microwave-repair',
+    name: 'Microwave Repair',
+    description: 'Magnetron replacements, turntable repairs, door switch safety, and keypads.',
+    icon: '📻'
+  },
+  {
+    slug: 'ice-maker-repair',
+    name: 'Ice Maker Repair',
+    description: 'Solving hollow cubes, water valve jams, mechanical ejectors, and slow production.',
+    icon: '🧊'
+  },
+  {
+    slug: 'wine-cooler-repair',
+    name: 'Wine Cooler Repair',
+    description: 'Precision climate control, dual-zone temp repair, and quiet fan motors.',
+    icon: '🍷'
+  },
+  {
+    slug: 'range-hood-repair',
+    name: 'Range Hood Repair',
+    description: 'Exhaust fan motor fixes, grease duct cleaning, light fixtures, and multi-speed switches.',
+    icon: '🌬️'
+  },
+  {
+    slug: 'garbage-disposal-repair',
+    name: 'Garbage Disposal Repair',
+    description: 'Unjamming flywheels, sealing sink flange leaks, and resetting reset buttons.',
+    icon: '♻️'
+  },
+  {
+    slug: 'commercial-appliance-repair',
+    name: 'Commercial Appliance Repair',
+    description: 'Heavy-duty restaurant, laundromat, and rental property appliance maintenance.',
+    icon: '🏢'
+  }
+];
+---
+
+<section id="services" class="py-16 sm:py-24 bg-white border-b border-gray-100">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <h2 class="text-xs font-bold uppercase tracking-widest text-brand-amber mb-2">Complete Home & Business Solutions</h2>
+      <p class="text-3xl sm:text-4xl font-heading font-extrabold text-brand-teal tracking-tight">
+        Comprehensive Appliance Services in Polk County
+      </p>
+      <p class="mt-4 text-base text-brand-muted">
+        We repair all major household and light commercial brands. Every repair includes original OEM parts and our standard parts & labor warranty.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+      {services.map((s) => (
+        <div class="bg-brand-bg rounded-2xl p-6 border border-gray-200/80 shadow-sm transition-all duration-300 flex flex-col justify-between group hover:shadow-xl hover:-translate-y-1.5 hover:border-brand-teal hover:bg-gradient-to-br hover:from-white hover:to-teal-50">
+          <div>
+            <div class="text-3xl mb-4 w-12 h-12 rounded-xl bg-white flex items-center justify-center shadow-sm group-hover:scale-110 transition-transform">
+              {s.icon}
+            </div>
+            <h3 class="text-lg font-heading font-bold text-brand-text mb-2 group-hover:text-brand-teal transition-colors">
+              {s.name}
+            </h3>
+            <p class="text-xs text-brand-muted leading-relaxed mb-6">
+              {s.description}
+            </p>
+          </div>
+          <a
+            href={`/services/${s.slug}`}
+            class="inline-flex items-center text-xs font-bold text-brand-teal group-hover:text-brand-amber transition-colors duration-300 mt-auto bg-brand-teal/5 group-hover:bg-brand-amber/10 px-3 py-2 rounded-lg w-fit"
+          >
+            <span>View Repair Details</span>
+            <svg class="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+            </svg>
+          </a>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

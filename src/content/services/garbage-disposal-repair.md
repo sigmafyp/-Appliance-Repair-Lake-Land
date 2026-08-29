@@ -1,0 +1,41 @@
+---
+title: "Garbage Disposal Repair"
+slug: "garbage-disposal-repair"
+shortDescription: "Lakeland garbage disposal repair & replacement. Unjamming flywheels, fixing sink seal leaks, motor resets, and electrical troubleshooting."
+icon: "♻️"
+whatWeFix:
+  - "Garbage disposal humming loudly without grinding food"
+  - "Disposal completely dead with no sound when switch is flipped"
+  - "Water leaking under sink from bottom of disposal housing"
+  - "Frequent tripping of disposal red reset overload button"
+  - "Metallic grinding noise caused by foreign objects stuck inside"
+  - "Slow draining sink water when disposal is turned off"
+signsYouNeedRepair:
+  - title: "Humming Motor Without Spinning"
+    description: "Bone fragments, fruit pits, or silverware jam shredded impellers against the stationary grind ring."
+  - title: "Puddle Under Kitchen Sink"
+    description: "Vibration cracks sink flange putty or deteriorates rubber lower throat gaskets, causing sink cabinet water damage."
+  - title: "Disposal Shutting Off After 5 Seconds"
+    description: "Internal motor overheating trips the red bimetallic reset switch to protect home electrical wiring."
+  - title: "Foul Sewage Odors from Drain"
+    description: "Decomposed food buildup beneath splash guards off-gasses offensive odors into your kitchen."
+brandsServiced:
+  - "InSinkErator"
+  - "Waste King"
+  - "Moen"
+  - "GE"
+  - "Whirlpool"
+  - "KitchenAid"
+faq:
+  - question: "Why is my garbage disposal humming but not grinding?"
+    answer: "A hard object is jammed between the impeller blade and grind ring. Turn off power immediately to avoid burning out the motor."
+  - question: "How do I reset a dead garbage disposal?"
+    answer: "Press the small red overload reset button located on the bottom metal shell under the sink, then test."
+  - question: "Can a leaking garbage disposal be repaired, or does it need replacement?"
+    answer: "Leaks from top sink flanges or dishwasher hose nipples can be sealed. Internal motor shell rust leaks require replacement."
+  - question: "Do you install new heavy-duty 3/4 HP garbage disposals?"
+    answer: "Yes, our service trucks carry commercial-grade 3/4 HP and 1 HP InSinkErator units for immediate installation."
+---
+# Prompt Garbage Disposal Repair in Lakeland, FL
+
+Clear kitchen sink backups fast. Lakeland Appliance Pro unjams, seals, and installs kitchen garbage disposals across Lakeland and Polk County.
