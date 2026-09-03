@@ -38,7 +38,49 @@ faq:
     answer: "Turn off the under-sink water valve immediately and call our technicians to inspect door gaskets and pump seals."
   - question: "Do you service quiet German dishwashers like Bosch and Miele?"
     answer: "Yes, our technicians are trained in European precision dishwashers and stock specialized drain pumps."
+comprehensiveCoverage:
+  - title: "Standard Built-In Dishwashers"
+    description: "Resolving poor wash performance, standing water, and door leaks on traditional 24-inch under-counter models."
+    bullets:
+      - "Wash motor & impeller replacement"
+      - "Drain pump clearing"
+      - "Door seal & latch repair"
+  - title: "Drawer Dishwashers"
+    description: "Specialized service for Fisher & Paykel double-drawer systems, addressing lid motor failures and delicate rotor sensors."
+    bullets:
+      - "Lid actuator replacement"
+      - "Rotor sensor diagnostics"
+      - "Flexible drain hose unkinking"
+  - title: "High-End & Ultra-Quiet Models"
+    description: "Service for Bosch, Miele, and Thermador. We fix complex water inlet valves, Zeolith drying systems, and leak sensors."
+    bullets:
+      - "AquaStop valve replacement"
+      - "Zeolith fan motor repair"
+      - "Optical turbidity sensor cleaning"
+diagnosticGuide:
+  - symptom: "Standing Water"
+    title: "Dishwasher Won't Drain"
+    description: "A clogged garbage disposal knockout, a jammed drain pump impeller (glass/seeds), or a failing check valve."
+    solution: "Drain line reverse-flush, pump impeller extraction, and check valve replacement."
+  - symptom: "Poor Cleaning"
+    title: "Dishes Come Out Cloudy or Dirty"
+    description: "Hard water scale clogging the spray arms, a failing circulation wash motor, or a broken detergent dispenser door."
+    solution: "Spray arm descaling, wash motor amp testing, and dispenser module replacement."
+  - symptom: "Leaking"
+    title: "Water Puddling on Kitchen Floor"
+    description: "A torn bottom door seal, a cracked wash arm splitting water horizontally at the door, or a faulty water inlet valve overflowing the tub."
+    solution: "Door gasket replacement, wash arm inspection, and float switch continuity testing."
+technicalStandards:
+  - title: "Turbidity & Float Diagnostics"
+    description: "We test the optical sensors that measure water cloudiness and the electronic float switches that prevent kitchen flooding."
+  - title: "Amp-Draw Circulation Testing"
+    description: "By measuring the electrical current drawn by the wash motor, we can determine if the internal bearings are seized without removing the unit."
+advantages:
+  - title: "Cabinetry & Floor Protection"
+    description: "Dishwasher leaks destroy expensive hardwood floors and cabinets. We identify and fix leaks with pinpoint accuracy to protect your home."
+  - title: "Sanitization Experts"
+    description: "We ensure your dishwasher's internal heating element reaches the required 155°F to effectively kill bacteria and sanitize baby bottles."
 ---
 # Superior Dishwasher Repair in Lakeland, FL
 
-Eliminate hand-washing hassle. Lakeland Appliance Pro fixes leaks, pumps, spray arms, and electronic boards for dishwashers across Polk County.
+Eliminate hand-washing hassle. Lakeland Repair fixes leaks, pumps, spray arms, and electronic boards for dishwashers across Polk County.

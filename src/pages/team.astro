@@ -1,6 +1,5 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import Breadcrumb from '../components/Breadcrumb.astro';
 import CtaBanner from '../components/CtaBanner.astro';
 
 const teamMembers = [
@@ -34,14 +33,13 @@ const teamMembers = [
   }
 ];
 
-const pageTitle = "Our Certified Technicians | Lakeland Appliance Pro";
-const pageDescription = "Meet the certified master technicians at Lakeland Appliance Pro serving Lakeland, Winter Haven, and Polk County.";
+const pageTitle = "Our Certified Technicians | Lakeland Repair";
+const pageDescription = "Meet the certified master technicians at Lakeland Repair serving Lakeland, Winter Haven, and Polk County.";
 ---
 
 <BaseLayout title={pageTitle} description={pageDescription}>
   
-  <Breadcrumb items={[{ name: 'Our Team' }]} />
-
+  
   <section class="bg-brand-teal text-white py-16 lg:py-20 border-b border-teal-800">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center max-w-3xl">
       <span class="text-brand-amber text-xs font-bold uppercase tracking-widest bg-teal-800 px-3 py-1 rounded-full border border-teal-600">

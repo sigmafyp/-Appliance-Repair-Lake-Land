@@ -1,99 +1,85 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import Breadcrumb from '../components/Breadcrumb.astro';
-import CtaBanner from '../components/CtaBanner.astro';
 import FaqAccordion from '../components/FaqAccordion.astro';
 
-const schedulingFaqs = [
+const pageTitle = "Frequently Asked Questions | Lakeland Repair";
+const pageDescription = "Find answers to the most common appliance repair questions in Lakeland and Polk County.";
+
+const faqs = [
   {
-    question: "How do I schedule a same-day appointment in Lakeland?",
-    answer: "Call our direct dispatch desk at (863) 555-0123. Calls placed before 2:00 PM are guaranteed same-day arrival windows."
+    question: "How fast can a technician arrive for a same-day repair in Lakeland?",
+    answer: "Our technicians are stationed locally across Polk County. When you call our dispatch desk, average arrival times range from 30 to 60 minutes depending on your zip code."
   },
   {
-    question: "What arrival windows do you offer?",
-    answer: "We provide tight 2-hour arrival windows so you don't have to wait home all day. Our technician calls 30 minutes prior to arrival."
+    question: "What type of warranty do you provide on parts and labor?",
+    answer: "Every repair completed by Lakeland Repair comes with a comprehensive 90-day parts and labor warranty. If the same issue recurs within 90 days, we fix it at zero extra charge."
   },
   {
-    question: "Do you offer weekend or evening emergency service?",
-    answer: "Yes, we dispatch technicians 6 days a week from 7:00 AM to 7:00 PM with emergency dispatch available for urgent refrigeration failures."
+    question: "Which appliance brands do you service?",
+    answer: "We service all major residential and commercial brands including Whirlpool, GE, Sub-Zero, LG, Samsung, Maytag, KitchenAid, Bosch, Frigidaire, Speed Queen, Viking, and Wolf."
+  },
+  {
+    question: "What should I expect during an in-home repair visit?",
+    answer: "Our technician will arrive in uniform with floor protection, perform a detailed diagnostic check, provide an itemized flat-rate estimate upfront, and complete the repair with genuine factory parts upon your approval."
+  },
+  {
+    question: "Which specific areas in Polk County do you cover?",
+    answer: "We cover all 10 major local zones: Downtown Lakeland, South Lakeland, Winter Haven, Plant City, Auburndale, Mulberry, Bartow, Highland City, Dixieland, and Lake Morton."
+  },
+  {
+    question: "Do you charge a service call fee?",
+    answer: "Yes, we charge a standard diagnostic fee to cover the technician's travel, fuel, and the time required to accurately diagnose the problem. However, if you choose to proceed with the repair on the same day, this diagnostic fee is completely waived and applied toward your final repair cost."
+  },
+  {
+    question: "Are your technicians certified and insured?",
+    answer: "Absolutely. All of our appliance repair technicians are fully certified, bonded, and insured. They undergo rigorous background checks and continuous training on the latest appliance models and technologies."
+  },
+  {
+    question: "Do you offer emergency or after-hours repair services?",
+    answer: "Yes, we understand that a broken refrigerator or leaking washer can't always wait. We offer emergency service scheduling. Please call our dispatch line directly for immediate after-hours availability."
+  },
+  {
+    question: "Should I repair or replace my broken appliance?",
+    answer: "Our technicians will provide an honest assessment. As a general rule, if the repair cost is less than 50% of the price of a new appliance and your unit is less than 10 years old, a repair is usually the most cost-effective choice."
+  },
+  {
+    question: "What payment methods do you accept?",
+    answer: "We accept all major credit and debit cards (Visa, MasterCard, American Express, Discover), as well as cash and corporate checks. Payment is due upon completion of the repair."
+  },
+  {
+    question: "Do you repair commercial appliances?",
+    answer: "Yes, we provide light commercial appliance repair for businesses like restaurants, laundromats, and offices. We service commercial refrigerators, freezers, ovens, and heavy-duty washers."
+  },
+  {
+    question: "How long does a typical repair take?",
+    answer: "Most repairs are completed within 1 to 2 hours. Our technicians drive fully-stocked vans with the most common OEM parts, allowing us to boast a 98% first-visit resolution rate."
+  },
+  {
+    question: "Do you sell appliance parts?",
+    answer: "We do not operate a retail parts counter. We provide parts strictly in conjunction with our in-home repair services to ensure warranty integrity and proper installation."
+  },
+  {
+    question: "How do I schedule an appointment?",
+    answer: "You can schedule an appointment by calling our dispatch desk at (863) 555-0123 or by filling out the online booking form on our Contact page. We'll quickly follow up to confirm your time slot."
   }
 ];
-
-const pricingFaqs = [
-  {
-    question: "How much is your diagnostic service fee?",
-    answer: "Our diagnostic fee is $89. If you proceed with the recommended repair, we waive the diagnostic fee entirely!"
-  },
-  {
-    question: "Do you charge by the hour or flat-rate?",
-    answer: "We strictly use flat-rate upfront pricing based on national trade repair manuals. You know the exact total before work begins."
-  },
-  {
-    question: "What payment methods do you accept upon completion?",
-    answer: "We accept all major credit cards (Visa, MasterCard, Amex, Discover), debit cards, cash, and corporate checks."
-  }
-];
-
-const areaFaqs = [
-  {
-    question: "Which towns in Polk County are covered?",
-    answer: "We cover Lakeland, Winter Haven, Plant City, Auburndale, Mulberry, Bartow, Highland City, Dixieland, Lake Morton, and surrounding unincorporated areas."
-  },
-  {
-    question: "Do you charge extra travel fees for outer Polk County towns?",
-    answer: "No! All towns within our designated Polk County service region pay the standard flat-rate diagnostic fee."
-  },
-  {
-    question: "Can you service rental properties or commercial locations?",
-    answer: "Yes, we work directly with property managers, landlords, and commercial kitchen owners across Polk County."
-  }
-];
-
-const warrantyFaqs = [
-  {
-    question: "What does your 90-day warranty cover?",
-    answer: "Our warranty covers 100% of the replacement parts and labor involved in your original repair. If the part fails within 90 days, we replace it free."
-  },
-  {
-    question: "Are your replacement parts genuine factory OEM?",
-    answer: "Yes, we source original manufacturer parts directly from authorized distributors to protect your appliance warranty."
-  },
-  {
-    question: "What happens if my appliance is not worth repairing?",
-    answer: "Our technician will explain the diagnosis honestly and advise whether replacement makes better financial sense than repair."
-  }
-];
-
-const pageTitle = "Frequently Asked Questions | Lakeland Appliance Pro";
-const pageDescription = "Find clear answers to all questions about scheduling, flat-rate pricing, service areas, and warranties at Lakeland Appliance Pro.";
 ---
 
 <BaseLayout title={pageTitle} description={pageDescription}>
-  
-  <Breadcrumb items={[{ name: 'FAQ' }]} />
-
-  <section class="bg-brand-teal text-white py-16 lg:py-20 border-b border-teal-800">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center max-w-3xl">
-      <span class="text-brand-amber text-xs font-bold uppercase tracking-widest bg-teal-800 px-3 py-1 rounded-full border border-teal-600">
-        Help Center & Answers
-      </span>
-      <h1 class="text-4xl sm:text-5xl font-heading font-extrabold text-white tracking-tight mt-3">
+  <!-- Custom FAQ Hero -->
+  <section class="relative bg-brand-teal text-white overflow-hidden py-16 lg:py-24 border-b border-teal-800">
+    <div class="absolute inset-0 bg-gradient-to-br from-brand-teal-dark to-brand-teal z-0"></div>
+    <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-brand-teal-light/20 rounded-full blur-3xl -mr-32 -mt-32 pointer-events-none z-0"></div>
+    
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-heading font-extrabold text-white tracking-tight mb-6">
         Frequently Asked Questions
       </h1>
-      <p class="text-base text-teal-100/90 leading-relaxed font-normal mt-3">
-        Everything you need to know about our Lakeland appliance repair process.
+      <p class="text-xl text-teal-50/90 max-w-3xl mx-auto leading-relaxed">
+        Have questions about our Polk County appliance repair services? Find clear answers below.
       </p>
     </div>
   </section>
 
-  <!-- Categorized FAQs -->
-  <div class="space-y-4">
-    <FaqAccordion faqItems={schedulingFaqs} title="1. Scheduling & Dispatch" subtitle="How our appointment windows and same-day scheduling work." />
-    <FaqAccordion faqItems={pricingFaqs} title="2. Pricing & Payments" subtitle="Clear, flat-rate pricing without hidden fees." />
-    <FaqAccordion faqItems={areaFaqs} title="3. Service Area & Coverage" subtitle="Polk County zip codes and regional coverage." />
-    <FaqAccordion faqItems={warrantyFaqs} title="4. Warranty & Parts Quality" subtitle="Our 90-day parts & labor guarantee explained." />
-  </div>
-
-  <CtaBanner />
-
+  <FaqAccordion faqItems={faqs} title="" subtitle="" />
 </BaseLayout>

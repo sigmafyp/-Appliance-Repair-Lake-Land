@@ -3,7 +3,7 @@ title: "Lake Morton Lakeland"
 slug: "lake-morton-lakeland"
 zip: "33801"
 responseTime: "30-45 mins"
-whyChooseUs: "Home to Lakeland's iconic swans and historic architecture, Lake Morton is a cornerstone of Lakeland culture. Residents trust Lakeland Appliance Pro for quiet, clean, and careful appliance repairs in historic and modern homes alike."
+whyChooseUs: "Home to Lakeland's iconic swans and historic architecture, Lake Morton is a cornerstone of Lakeland culture. Residents trust Lakeland Repair for quiet, clean, and careful appliance repairs in historic and modern homes alike."
 neighborhoods:
   - "Lake Morton Drive Historic District"
   - "Success Ave Corridor"

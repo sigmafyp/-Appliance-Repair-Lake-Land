@@ -25,9 +25,16 @@ const safetyItems = [
     tag: "Electrical Safety"
   }
 ];
+
+export interface Props {
+  limit?: number;
+}
+
+const { limit } = Astro.props;
+const displayItems = limit ? safetyItems.slice(0, limit) : safetyItems;
 ---
 
-<section id="safety" class="py-16 sm:py-24 bg-brand-surface border-b border-gray-200">
+<section id="safety" class="py-16 sm:py-24 bg-white border-b border-gray-100">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center max-w-3xl mx-auto mb-16">
       <h2 class="text-xs font-bold uppercase tracking-widest text-brand-amber mb-2">Home & Family Protection</h2>
@@ -39,8 +46,8 @@ const safetyItems = [
       </p>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-      {safetyItems.map((item) => (
+    <div class={`grid grid-cols-1 md:grid-cols-2 ${limit === 3 ? 'lg:grid-cols-3' : 'lg:grid-cols-4'} gap-6`}>
+      {displayItems.map((item) => (
         <div class="bg-white rounded-2xl p-7 border border-gray-200/90 shadow-md flex flex-col justify-between hover:shadow-xl transition-all">
           <div>
             <div class="flex items-center justify-between mb-4">
@@ -59,5 +66,7 @@ const safetyItems = [
         </div>
       ))}
     </div>
+
+
   </div>
 </section>

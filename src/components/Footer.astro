@@ -10,7 +10,6 @@ const services = [
   { name: 'Dishwasher Repair', href: '/services/dishwasher-repair' },
   { name: 'Microwave Repair', href: '/services/microwave-repair' },
   { name: 'Ice Maker Repair', href: '/services/ice-maker-repair' },
-  { name: 'Wine Cooler Repair', href: '/services/wine-cooler-repair' },
   { name: 'Range Hood Repair', href: '/services/range-hood-repair' },
   { name: 'Garbage Disposal Repair', href: '/services/garbage-disposal-repair' },
   { name: 'Commercial Appliance Repair', href: '/services/commercial-appliance-repair' },
@@ -37,13 +36,9 @@ const serviceAreas = [
       <!-- Column 1: Brand Blurb -->
       <div class="space-y-4">
         <div class="flex items-center space-x-3">
-          <div class="w-9 h-9 rounded-lg bg-brand-amber flex items-center justify-center text-brand-teal font-extrabold text-lg shadow">
-            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 10V3L4 14h7v7l9-11h-7z" />
-            </svg>
-          </div>
+          <img src="/logo.png" alt="Lakeland Repair" class="w-12 h-12 drop-shadow-md rounded-lg" />
           <span class="font-heading font-extrabold text-xl text-white tracking-tight">
-            Lakeland<span class="text-brand-amber">Pro</span>
+            Lakeland<span class="text-brand-amber">Repair</span>
           </span>
         </div>
         <p class="text-sm text-teal-100/80 leading-relaxed">
@@ -134,12 +129,12 @@ const serviceAreas = [
     <!-- Bottom Legal Bar -->
     <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-teal-200/70 space-y-4 sm:space-y-0">
       <div>
-        © {new Date().getFullYear()} Lakeland Appliance Pro. All rights reserved. Lakeland & Polk County, FL.
+        © {new Date().getFullYear()} Lakeland Repair. All rights reserved. Lakeland & Polk County, FL.
       </div>
       <div class="flex items-center space-x-6">
+        <a href="/faq" class="hover:text-brand-amber transition-colors">FAQ</a>
         <a href="/privacy-policy" class="hover:text-brand-amber transition-colors">Privacy Policy</a>
         <a href="/terms-of-service" class="hover:text-brand-amber transition-colors">Terms of Service</a>
-        <a href="/faq" class="hover:text-brand-amber transition-colors">FAQ</a>
         <a href="/contact" class="hover:text-brand-amber transition-colors">Contact</a>
       </div>
     </div>

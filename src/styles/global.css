@@ -1,8 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap');
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@theme {
+  --color-brand-teal: #0F4C5C;
+  --color-brand-teal-dark: #0A343F;
+  --color-brand-teal-light: #1D7082;
+  --color-brand-teal-bg: #EAF4F6;
+  
+  --color-brand-amber: #F2994A;
+  --color-brand-amber-hover: #E08637;
+  --color-brand-amber-light: #FFF5EC;
+  
+  --color-brand-bg: #FAFAF8;
+  --color-brand-surface: #F1F3F2;
+  --color-brand-text: #1F2A2E;
+  --color-brand-muted: #5C6B6E;
+  --color-brand-success: #4C9A6A;
+  --color-brand-alert: #C75B4A;
+
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-heading: 'Manrope', 'Inter', system-ui, sans-serif;
+}
 
 @layer base {
   html {

@@ -3,7 +3,7 @@ title: "Winter Haven"
 slug: "winter-haven"
 zip: ["33880", "33881", "33884"]
 responseTime: "45-90 mins"
-whyChooseUs: "Serving the Chain of Lakes city! Winter Haven homeowners choose Lakeland Appliance Pro for reliable, upfront-priced repairs. From waterfront lake homes along Cypress Gardens Blvd to downtown Winter Haven, our trucks arrive fully equipped for fast solutions."
+whyChooseUs: "Serving the Chain of Lakes city! Winter Haven homeowners choose Lakeland Repair for reliable, upfront-priced repairs. From waterfront lake homes along Cypress Gardens Blvd to downtown Winter Haven, our trucks arrive fully equipped for fast solutions."
 neighborhoods:
   - "Chain of Lakes Waterfront District"
   - "Cypress Gardens Blvd Corridor"

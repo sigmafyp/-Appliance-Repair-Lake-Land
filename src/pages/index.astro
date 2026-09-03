@@ -5,13 +5,14 @@ import Hero from '../components/Hero.astro';
 import WhyChooseUs from '../components/WhyChooseUs.astro';
 import ServicesGrid from '../components/ServicesGrid.astro';
 import ProcessSteps from '../components/ProcessSteps.astro';
-import CommonProblems from '../components/CommonProblems.astro';
 import DiyVsPro from '../components/DiyVsPro.astro';
 import HealthSafety from '../components/HealthSafety.astro';
 import CaseStudies from '../components/CaseStudies.astro';
 import ServiceAreaGrid from '../components/ServiceAreaGrid.astro';
 import FaqAccordion from '../components/FaqAccordion.astro';
 import CtaBanner from '../components/CtaBanner.astro';
+import SlimCta from '../components/SlimCta.astro';
+import ServiceBenefits from '../components/ServiceBenefits.astro';
 
 const homepageFaqs = [
   {
@@ -20,7 +21,7 @@ const homepageFaqs = [
   },
   {
     question: "What type of warranty do you provide on parts and labor?",
-    answer: "Every repair completed by Lakeland Appliance Pro comes with a comprehensive 90-day parts and labor warranty. If the same issue recurs within 90 days, we fix it at zero extra charge."
+    answer: "Every repair completed by Lakeland Repair comes with a comprehensive 90-day parts and labor warranty. If the same issue recurs within 90 days, we fix it at zero extra charge."
   },
   {
     question: "Which appliance brands do you service?",
@@ -31,58 +32,28 @@ const homepageFaqs = [
     answer: "Our technician will arrive in uniform with floor protection, perform a detailed diagnostic check, provide an itemized flat-rate estimate upfront, and complete the repair with genuine factory parts upon your approval."
   },
   {
-    question: "Are there any DIY prep steps I should take before the technician arrives?",
-    answer: "Clear any items stored on top of or directly around the appliance, ensure pets are secured, and keep a clear path from the front door to the kitchen or laundry room."
-  },
-  {
-    question: "Do you offer commercial appliance repair for local businesses?",
-    answer: "Yes! We service restaurants, laundromats, property management rentals, hotels, and office facilities throughout Lakeland and Polk County."
-  },
-  {
     question: "Which specific areas in Polk County do you cover?",
     answer: "We cover all 10 major local zones: Downtown Lakeland, South Lakeland, Winter Haven, Plant City, Auburndale, Mulberry, Bartow, Highland City, Dixieland, and Lake Morton."
   }
 ];
 
-const pageTitle = "Lakeland Appliance Pro | Same-Day Appliance Repair in Lakeland, FL";
-const pageDescription = "Polk County's most trusted experts for same-day home appliance repairs. Fast, reliable service for refrigerators, washers, dryers, ovens, dishwashers, and more.";
+const pageTitle = "Lakeland Repair | Premium Appliance Repair in Lakeland, FL";
+const pageDescription = "Polk County's most trusted experts for premium home appliance repairs. Fast, reliable service for refrigerators, washers, dryers, ovens, dishwashers, and more.";
 ---
 
 <BaseLayout title={pageTitle} description={pageDescription}>
   
-  <!-- 2. Hero Section -->
   <Hero />
-
-
-
-  <!-- 4. Why Choose Us Grid -->
-  <WhyChooseUs />
-
-  <!-- 5. Comprehensive Repair Services Grid (All 14) -->
-  <ServicesGrid />
-
-  <!-- 6. Our 5-Step Process Timeline -->
-  <ProcessSteps />
-
-  <!-- 7. Common Appliance Problems in Lakeland (Central FL conditions) -->
-  <CommonProblems />
-
-  <!-- 8. DIY vs. Call a Pro -->
-  <DiyVsPro />
-
-  <!-- 9. Local Health & Safety -->
-  <HealthSafety />
-
-  <!-- 10. Case Studies Gallery -->
-  <CaseStudies />
-
-  <!-- 11. Service Areas Grid (All 10) -->
-  <ServiceAreaGrid />
-
-  <!-- 12. FAQ Accordion (7 Questions) -->
-  <FaqAccordion faqItems={homepageFaqs} />
-
-  <!-- 13. Final CTA Banner -->
-  <CtaBanner />
+  <div data-aos="fade-up"><WhyChooseUs isHomepage={true} /></div>
+  <div data-aos="fade-up"><ServicesGrid limit={9} /></div>
+  <div data-aos="fade-up"><SlimCta text="Broken appliance? Our Lakeland dispatch desk is ready." /></div>
+  <div data-aos="fade-up"><ProcessSteps isHomepage={true} /></div>
+  <div data-aos="fade-up"><DiyVsPro /></div>
+  <div data-aos="fade-up"><HealthSafety limit={3} /></div>
+  <div data-aos="fade-up"><CaseStudies /></div>
+  <div data-aos="fade-up"><ServiceBenefits /></div>
+  <div data-aos="fade-up"><ServiceAreaGrid /></div>
+  <div data-aos="fade-up"><FaqAccordion faqItems={homepageFaqs} isHomepage={true} /></div>
+  <div data-aos="fade-in"><CtaBanner /></div>
 
 </BaseLayout>

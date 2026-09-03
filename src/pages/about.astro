@@ -1,94 +1,124 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import Breadcrumb from '../components/Breadcrumb.astro';
+import PageHeader from '../components/PageHeader.astro';
 import CtaBanner from '../components/CtaBanner.astro';
 
-const pageTitle = "About Us | Lakeland Appliance Pro";
-const pageDescription = "Learn about Lakeland Appliance Pro, Polk County's premier local appliance repair specialists dedicated to fast, honest trade craftsmanship.";
+const pageTitle = "About Us | Lakeland Repair";
+const pageDescription = "Learn about Lakeland Repair, Polk County's premier local appliance repair specialists dedicated to fast, honest trade craftsmanship.";
 ---
 
 <BaseLayout title={pageTitle} description={pageDescription}>
   
-  <Breadcrumb items={[{ name: 'About Us' }]} />
-
-  <!-- About Hero -->
-  <section class="bg-brand-teal text-white py-16 lg:py-24 border-b border-teal-800">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="max-w-3xl space-y-4">
-        <span class="text-brand-amber text-xs font-bold uppercase tracking-widest bg-teal-800 px-3 py-1 rounded-full border border-teal-600">
-          Rooted in Central Florida
-        </span>
-        <h1 class="text-4xl sm:text-5xl font-heading font-extrabold text-white tracking-tight">
-          About Lakeland Appliance Pro
-        </h1>
-        <p class="text-lg text-teal-100/90 leading-relaxed font-normal">
-          Building trust one kitchen and laundry room at a time across Lakeland, Winter Haven, and Polk County.
-        </p>
-      </div>
-    </div>
-  </section>
+  <PageHeader 
+    title="About Lakeland Repair" 
+    description="Building trust one kitchen and laundry room at a time across Lakeland, Winter Haven, and Polk County." 
+  />
 
   <!-- Story & Mission -->
-  <section class="py-16 sm:py-24 bg-white border-b border-gray-100">
+  <section class="py-20 bg-white border-b border-gray-100">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
         
-        <div class="lg:col-span-6 space-y-6">
-          <h2 class="text-3xl font-heading font-extrabold text-brand-teal">
-            Our Story: Master Trade Skill Meets Florida Hospitality
+        <div class="space-y-6">
+          <span class="text-brand-amber font-bold tracking-widest uppercase text-sm">Our Story</span>
+          <h2 class="text-3xl sm:text-4xl font-heading font-extrabold text-brand-teal leading-tight">
+            Master Trade Skill Meets Florida Hospitality
           </h2>
-          <p class="text-sm text-brand-muted leading-relaxed">
-            Founded right here in Lakeland, Florida, Lakeland Appliance Pro was established to provide homeowners with an honest, reliable alternative to overpriced factory service networks and unreliable handymen.
+          <p class="text-base text-brand-muted leading-relaxed">
+            Founded right here in Lakeland, Florida, Lakeland Repair was established to provide homeowners with an honest, reliable alternative to overpriced factory service networks and unreliable handymen.
           </p>
-          <p class="text-sm text-brand-muted leading-relaxed">
+          <p class="text-base text-brand-muted leading-relaxed">
             We understand that when your refrigerator stops cooling in the 95°F Central Florida heat or your washer floods the laundry room on a Monday morning, you need immediate, competent assistance from technicians who treat your home with respect.
           </p>
-          <div class="pt-4 border-t border-gray-200 grid grid-cols-2 gap-6">
+          <div class="pt-8 mt-8 border-t border-gray-100 grid grid-cols-2 gap-8">
             <div>
-              <span class="text-3xl font-heading font-extrabold text-brand-amber">12+</span>
-              <span class="text-xs font-bold text-brand-text block mt-1">Years Servicing Polk County</span>
+              <span class="text-4xl font-heading font-extrabold text-brand-amber block mb-2">12+</span>
+              <span class="text-sm font-bold text-brand-text">Years Servicing Polk County</span>
             </div>
             <div>
-              <span class="text-3xl font-heading font-extrabold text-brand-teal">5,000+</span>
-              <span class="text-xs font-bold text-brand-text block mt-1">Local Repairs Completed</span>
+              <span class="text-4xl font-heading font-extrabold text-brand-teal block mb-2">5,000+</span>
+              <span class="text-sm font-bold text-brand-text">Local Repairs Completed</span>
             </div>
           </div>
         </div>
 
-        <div class="lg:col-span-6">
-          <div class="bg-brand-bg p-8 rounded-2xl border border-gray-200 shadow-md space-y-6">
-            <h3 class="text-xl font-heading font-bold text-brand-teal">
+        <div class="relative">
+          <div class="absolute inset-0 bg-gradient-to-tr from-brand-teal/20 to-brand-amber/20 rounded-3xl transform rotate-3 scale-105 -z-10"></div>
+          <div class="bg-white p-10 rounded-3xl border border-gray-100 shadow-xl space-y-8">
+            <h3 class="text-2xl font-heading font-bold text-brand-teal mb-6">
               The "Local to Lakeland" Guarantee
             </h3>
-            <ul class="space-y-4 text-xs text-brand-text">
-              <li class="flex items-start space-x-3">
-                <span class="text-brand-success font-bold text-lg">✓</span>
+            <ul class="space-y-6 text-sm text-brand-text">
+              <li class="flex items-start gap-4">
+                <div class="w-8 h-8 rounded-full bg-teal-50 text-brand-teal flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                </div>
                 <div>
-                  <strong>Licensed & Insured Trade Professionals:</strong> All technicians undergo strict background checks, trade certification, and ongoing manufacturer training.
+                  <strong class="block text-base mb-1">Licensed & Insured Professionals</strong>
+                  <span class="text-brand-muted">All technicians undergo strict background checks, trade certification, and ongoing manufacturer training.</span>
                 </div>
               </li>
-              <li class="flex items-start space-x-3">
-                <span class="text-brand-success font-bold text-lg">✓</span>
+              <li class="flex items-start gap-4">
+                <div class="w-8 h-8 rounded-full bg-teal-50 text-brand-teal flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                </div>
                 <div>
-                  <strong>No Hidden Surprises:</strong> You receive an itemized, flat-rate quote before any repair work begins. No hourly billing tricks or surprise trip charges.
+                  <strong class="block text-base mb-1">No Hidden Surprises</strong>
+                  <span class="text-brand-muted">You receive an itemized, flat-rate quote before any repair work begins. No hourly billing tricks.</span>
                 </div>
               </li>
-              <li class="flex items-start space-x-3">
-                <span class="text-brand-success font-bold text-lg">✓</span>
+              <li class="flex items-start gap-4">
+                <div class="w-8 h-8 rounded-full bg-teal-50 text-brand-teal flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                </div>
                 <div>
-                  <strong>Stocked Mobile Fleet:</strong> Our dispatch trucks carry thousands of common OEM parts to ensure same-day completion for over 85% of service calls.
+                  <strong class="block text-base mb-1">Stocked Mobile Fleet</strong>
+                  <span class="text-brand-muted">Our dispatch trucks carry thousands of common OEM parts to ensure same-day completion.</span>
                 </div>
               </li>
-              <li class="flex items-start space-x-3">
-                <span class="text-brand-success font-bold text-lg">✓</span>
+              <li class="flex items-start gap-4">
+                <div class="w-8 h-8 rounded-full bg-teal-50 text-brand-teal flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                </div>
                 <div>
-                  <strong>90-Day Protection:</strong> Every single repair is backed by our rock-solid 90-day parts and labor guarantee.
+                  <strong class="block text-base mb-1">90-Day Protection</strong>
+                  <span class="text-brand-muted">Every single repair is backed by our rock-solid 90-day parts and labor guarantee.</span>
                 </div>
               </li>
             </ul>
           </div>
         </div>
 
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 bg-brand-surface border-b border-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="text-xs font-bold uppercase tracking-widest text-brand-amber mb-3">Our Principles</h2>
+        <h3 class="text-3xl font-heading font-extrabold text-brand-teal">
+          The Core Values That Drive Us
+        </h3>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="bg-white p-8 rounded-2xl border border-gray-200 shadow-sm hover:border-brand-teal transition-colors">
+          <h4 class="font-bold text-xl text-brand-teal mb-3">Honesty</h4>
+          <p class="text-sm text-brand-muted leading-relaxed">We never sell you a repair you don't need. If the machine is dying, we will tell you to replace it instead.</p>
+        </div>
+        <div class="bg-white p-8 rounded-2xl border border-gray-200 shadow-sm hover:border-brand-teal transition-colors">
+          <h4 class="font-bold text-xl text-brand-teal mb-3">Speed</h4>
+          <p class="text-sm text-brand-muted leading-relaxed">When your fridge is warm, you can't wait days. We aggressively manage dispatch routes to offer same-day priority.</p>
+        </div>
+        <div class="bg-white p-8 rounded-2xl border border-gray-200 shadow-sm hover:border-brand-teal transition-colors">
+          <h4 class="font-bold text-xl text-brand-teal mb-3">Craftsmanship</h4>
+          <p class="text-sm text-brand-muted leading-relaxed">We don't do "duct tape" fixes. We use genuine OEM parts and factory-approved diagnostic procedures.</p>
+        </div>
+        <div class="bg-white p-8 rounded-2xl border border-gray-200 shadow-sm hover:border-brand-teal transition-colors">
+          <h4 class="font-bold text-xl text-brand-teal mb-3">Respect</h4>
+          <p class="text-sm text-brand-muted leading-relaxed">We treat your home like our own. Shoe covers, floor mats, and post-repair cleanups are mandatory.</p>
+        </div>
       </div>
     </div>
   </section>

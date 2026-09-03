@@ -18,7 +18,7 @@ const steps = [
   {
     step: "04",
     title: "Precision OEM Repair",
-    description: "With your approval, we install genuine factory replacement parts directly from our fully stocked service vans."
+    description: "With your approval, we install genuine factory replacement parts directly from our fully stocked vans."
   },
   {
     step: "05",
@@ -26,42 +26,53 @@ const steps = [
     description: "We run a complete test cycle, clean up the workspace, and provide your written 90-day parts & labor warranty."
   }
 ];
+
+export interface Props {
+  isHomepage?: boolean;
+}
+
+const { isHomepage } = Astro.props;
 ---
 
-<section id="process" class="py-16 sm:py-24 bg-brand-surface border-b border-gray-200">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<section id="process" class="py-20 bg-brand-bg border-b border-gray-200 relative overflow-hidden">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
     <div class="text-center max-w-3xl mx-auto mb-16">
-      <h2 class="text-xs font-bold uppercase tracking-widest text-brand-amber mb-2">Hassle-Free Repair Workflow</h2>
-      <p class="text-3xl sm:text-4xl font-heading font-extrabold text-brand-teal tracking-tight">
+      <div class="inline-flex items-center justify-center space-x-2 px-4 py-1.5 rounded-full bg-white border border-gray-200 mb-6 shadow-sm">
+        <span class="w-2 h-2 rounded-full bg-brand-amber animate-pulse"></span>
+        <span class="text-xs font-bold uppercase tracking-widest text-brand-amber">Hassle-Free Workflow</span>
+      </div>
+      <h2 class="text-3xl sm:text-4xl font-heading font-extrabold text-brand-teal tracking-tight">
         Our Simple 5-Step Repair Process
-      </p>
-      <p class="mt-4 text-base text-brand-muted">
+      </h2>
+      <p class="mt-4 text-lg text-brand-muted">
         From initial phone call to final test cycle, we keep you informed every step of the way.
       </p>
     </div>
 
     <!-- Timeline Grid -->
     <div class="grid grid-cols-1 md:grid-cols-5 gap-6 relative">
+      <!-- Horizontal Connecting Line (Desktop) -->
+      <div class="hidden md:block absolute top-8 left-10 right-10 h-0.5 bg-gradient-to-r from-teal-200 via-brand-teal to-teal-200 z-0"></div>
+      
       {steps.map((item, index) => (
-        <div class="bg-white rounded-2xl p-6 border border-gray-200/80 shadow-md relative flex flex-col justify-between group hover:-translate-y-2 hover:shadow-xl hover:border-brand-teal transition-all duration-300">
-          <div>
-            <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-brand-teal to-teal-700 text-brand-amber font-heading font-extrabold text-lg flex items-center justify-center mb-5 shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300">
-              {item.step}
-            </div>
-            <h3 class="text-base font-heading font-bold text-brand-text mb-2">
+        <div class="relative z-10 flex flex-col group">
+          <div class="w-16 h-16 mx-auto bg-white border-[3px] border-brand-bg rounded-2xl shadow-xl flex items-center justify-center mb-6 relative overflow-hidden group-hover:-translate-y-2 transition-transform duration-300">
+            <div class="absolute inset-0 bg-gradient-to-br from-teal-50 to-teal-100 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <span class="font-heading font-black text-2xl text-brand-teal relative z-10 group-hover:scale-110 transition-transform">{item.step}</span>
+          </div>
+          
+          <div class="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm hover:shadow-lg transition-all duration-300 flex-grow relative overflow-hidden">
+            <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-brand-amber to-transparent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
+            <h3 class="text-[15px] font-heading font-bold text-brand-text mb-2 text-center group-hover:text-brand-teal transition-colors">
               {item.title}
             </h3>
-            <p class="text-xs text-brand-muted leading-relaxed">
+            <p class="text-xs text-brand-muted leading-relaxed text-center">
               {item.description}
             </p>
           </div>
-          {index < steps.length - 1 && (
-            <div class="hidden md:flex absolute -right-4 top-12 w-8 h-8 rounded-full bg-white border border-gray-100 shadow items-center justify-center text-brand-amber font-bold text-lg z-10 pointer-events-none group-hover:bg-brand-amber group-hover:text-white transition-colors duration-300">
-              →
-            </div>
-          )}
         </div>
       ))}
     </div>
+
   </div>
 </section>

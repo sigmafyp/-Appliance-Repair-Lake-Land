@@ -3,7 +3,7 @@ title: "Mulberry"
 slug: "mulberry"
 zip: "33860"
 responseTime: "45-75 mins"
-whyChooseUs: "Mulberry homeowners near Highway 60 and SR 37 count on Lakeland Appliance Pro for prompt, honest appliance repairs. We take pride in servicing Mulberry's growing residential subdivisions with transparent pricing and master trade craftsmanship."
+whyChooseUs: "Mulberry homeowners near Highway 60 and SR 37 count on Lakeland Repair for prompt, honest appliance repairs. We take pride in servicing Mulberry's growing residential subdivisions with transparent pricing and master trade craftsmanship."
 neighborhoods:
   - "Imperial Lakes Subdivision"
   - "Highway 60 West Corridor"

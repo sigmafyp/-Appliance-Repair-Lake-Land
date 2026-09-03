@@ -38,7 +38,49 @@ faq:
     answer: "Most washing machine repairs are completed within 45 to 90 minutes on-site."
   - question: "Do you service both top-load and front-load washers?"
     answer: "Yes, our technicians are certified for traditional agitator top-loaders, HE high-efficiency top-loaders, and front-load units."
+comprehensiveCoverage:
+  - title: "Front-Loading Washers"
+    description: "Complex door seal replacements, direct-drive motor diagnostics, and drum bearing rebuilds. We handle high-efficiency vibration dampening."
+    bullets:
+      - "Door boot seal mold/leak repair"
+      - "Direct-drive motor replacement"
+      - "Tub bearing & spider arm rebuild"
+  - title: "Top-Loading Washers"
+    description: "Traditional agitator and high-efficiency impeller models. We fix unbalanced spin cycles, drain pump clogs, and lid lock failures."
+    bullets:
+      - "Agitator dog & clutch repair"
+      - "Suspension rod replacement"
+      - "Drain pump coin clearing"
+  - title: "Laundry Centers & Stacked Units"
+    description: "Compact stacked laundry towers requiring specialized extraction for tight spaces and unified control board diagnostics."
+    bullets:
+      - "Unified main control board repair"
+      - "Tight-space extraction & leveling"
+      - "Drive belt tensioning"
+diagnosticGuide:
+  - symptom: "Drain Failure"
+    title: "Washer Won't Drain or Spin"
+    description: "Usually caused by a clogged drain pump filter (coins/socks), a failed drain pump motor, or a faulty lid lock switch preventing the spin cycle."
+    solution: "Manual tub drain, pump filter extraction, multimeter testing of lid lock continuity, and OEM pump replacement."
+  - symptom: "Violent Vibration"
+    title: "Loud Banging During Spin Cycle"
+    description: "Worn tub suspension rods, broken shock absorbers, or a fractured rear drum bearing assembly causing the tub to violently hit the cabinet."
+    solution: "Suspension rod replacement kit installation, bearing press extraction, and laser-guided leveling."
+  - symptom: "Water Leaks"
+    title: "Puddles Under the Washer"
+    description: "Torn rubber door boot seals on front loaders, cracked internal drain hoses, or a failing water inlet valve leaking when the machine is off."
+    solution: "Door bellow replacement, inlet valve pressure testing, and braided steel hose upgrades."
+technicalStandards:
+  - title: "Digital Strobe & Vibration Analysis"
+    description: "We use digital tachometers and strobe analysis to identify unbalanced spin cycles and bearing wear before catastrophic failure."
+  - title: "High-Voltage Motor Diagnostics"
+    description: "We test stator and rotor resistance on direct-drive motors, bypassing main control boards to isolate the exact point of electrical failure."
+advantages:
+  - title: "Flood Prevention Focus"
+    description: "We treat washer leaks as immediate emergencies to protect your home's flooring and drywall from severe water damage."
+  - title: "Vibration Dampening Expertise"
+    description: "Second-floor laundry rooms require perfect leveling and specialized shock absorber knowledge to prevent house-shaking vibration."
 ---
 # Professional Washing Machine Repair in Lakeland, FL
 
-A broken washing machine brings household routines to a standstill. Lakeland Appliance Pro delivers rapid, clean, and warrantied washer repairs across Polk County.
+A broken washing machine brings household routines to a standstill. Lakeland Repair delivers rapid, clean, and warrantied washer repairs across Polk County.

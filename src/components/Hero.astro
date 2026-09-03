@@ -11,12 +11,12 @@ const {
   heading = "Fast, Reliable Appliance Repair in Lakeland, FL",
   subhead = "Polk County's most trusted experts for same-day home repairs. Restoring calm and efficiency to your kitchen and laundry room.",
   badgeText = "Polk County's Top Rated Local Technicians",
-  image = "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=1200&q=80",
+  image = "/hero_image_new.jpg",
   showBadges = true
 } = Astro.props;
 ---
 
-<section class="relative bg-brand-teal text-white overflow-hidden py-16 lg:py-24 border-b border-teal-800">
+<section class="relative bg-brand-teal text-white overflow-hidden pt-10 pb-16 lg:pt-12 lg:pb-24 border-b border-teal-800">
   <!-- Subtle Background Ripple Texture Overlay -->
   <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#F2994A_1px,transparent_1px)] [background-size:24px_24px] pointer-events-none"></div>
 
@@ -105,8 +105,12 @@ const {
                 <span class="text-brand-amber font-bold block text-sm">Lakeland Local Dispatch</span>
                 <span class="text-teal-200">Serving all 10 Polk County Communities</span>
               </div>
-              <div class="bg-brand-success text-slate-900 font-bold px-2.5 py-1 rounded-full text-[11px]">
-                Available Today
+              <div class="flex items-center space-x-1.5 bg-emerald-500/20 text-emerald-300 font-bold px-3 py-1.5 rounded-full text-[11px] border border-emerald-500/30">
+                <span class="relative flex h-2 w-2">
+                  <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                  <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                </span>
+                <span>Available Today</span>
               </div>
             </div>
           </div>

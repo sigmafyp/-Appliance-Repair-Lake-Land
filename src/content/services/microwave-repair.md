@@ -37,7 +37,49 @@ faq:
     answer: "High-voltage capacitors store lethal charge even when unplugged. Repairs must only be performed by trained technicians with high-voltage discharge tools."
   - question: "Do you repair built-in wall microwave combos?"
     answer: "Yes, we specialize in luxury wall oven/microwave combination tower units."
+comprehensiveCoverage:
+  - title: "Over-The-Range Microwaves"
+    description: "Fixing exhaust fan failures, dead control boards, and magnetron burnout while safely extracting the unit from above the stove."
+    bullets:
+      - "Magnetron & diode replacement"
+      - "Exhaust fan motor repair"
+      - "Door hook & micro-switch alignment"
+  - title: "Built-In & Drawer Microwaves"
+    description: "Specialized service for Sharp and Bosch microwave drawers, addressing motorized track failures and hidden control panels."
+    bullets:
+      - "Motorized drawer glide repair"
+      - "Hidden control board diagnostics"
+      - "Waveguide cover replacement"
+  - title: "Countertop Microwaves"
+    description: "High-voltage diagnostics for premium countertop units, focusing on turntable motors and keypad unresponsiveness."
+    bullets:
+      - "Turntable synchronous motor fix"
+      - "Membrane keypad replacement"
+      - "High-voltage capacitor testing"
+diagnosticGuide:
+  - symptom: "No Heat"
+    title: "Microwave Runs But Food is Cold"
+    description: "A failed magnetron tube, a blown high-voltage diode, or a faulty door micro-switch preventing the heating circuit from engaging."
+    solution: "High-voltage capacitor discharge, diode continuity testing, and OEM magnetron replacement."
+  - symptom: "Dead Unit"
+    title: "Completely Unresponsive, No Display"
+    description: "A blown internal ceramic line fuse caused by a door switch short, or a dead main control board due to a power surge."
+    solution: "Door switch alignment testing, line fuse replacement, and control board voltage checks."
+  - symptom: "Sparking"
+    title: "Sparks or Arcing Inside Cavity"
+    description: "A burnt waveguide cover, exposed metal on the interior cavity, or a failing magnetron antenna."
+    solution: "Waveguide cover replacement, cavity enamel touch-up, and magnetron antenna inspection."
+technicalStandards:
+  - title: "High-Voltage Capacitor Discharge"
+    description: "Microwaves store lethal 2,000+ volts even when unplugged. We use specialized discharge resistors to safely neutralize the capacitor before any repair."
+  - title: "Microwave Leakage Detection"
+    description: "After every repair, we test the door seal with an RF leakage meter to ensure no dangerous microwave radiation is escaping into your kitchen."
+advantages:
+  - title: "Safety First Protocol"
+    description: "Due to lethal high voltage, microwaves are the most dangerous appliance to DIY. Our certified technicians handle these hazards safely."
+  - title: "Cost-Effective Logic"
+    description: "We provide honest assessments. If the magnetron and board are both fried on a standard unit, we will tell you if replacement is cheaper than repair."
 ---
 # Built-In & Over-The-Range Microwave Repair in Lakeland
 
-Keep your kitchen convenient and safe. Lakeland Appliance Pro provides expert high-voltage safety repairs for over-the-range and built-in microwaves.
+Keep your kitchen convenient and safe. Lakeland Repair provides expert high-voltage safety repairs for over-the-range and built-in microwaves.

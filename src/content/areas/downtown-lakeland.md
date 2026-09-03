@@ -3,7 +3,7 @@ title: "Downtown Lakeland"
 slug: "downtown-lakeland"
 zip: "33801"
 responseTime: "30-60 mins"
-whyChooseUs: "Downtown Lakeland homeowners, historic loft residents, and local businesses count on Lakeland Appliance Pro for rapid same-day appliance repair. With technicians dispatched right off Pine Street and Massachusetts Ave, we arrive quickly equipped to fix kitchen and laundry equipment on the spot."
+whyChooseUs: "Downtown Lakeland homeowners, historic loft residents, and local businesses count on Lakeland Repair for rapid same-day appliance repair. With technicians dispatched right off Pine Street and Massachusetts Ave, we arrive quickly equipped to fix kitchen and laundry equipment on the spot."
 neighborhoods:
   - "Munn Park Historic District"
   - "Kentucky Ave Corridor"

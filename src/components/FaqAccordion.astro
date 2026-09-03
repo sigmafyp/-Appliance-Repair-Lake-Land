@@ -8,12 +8,14 @@ export interface Props {
   faqItems: FAQItem[];
   title?: string;
   subtitle?: string;
+  isHomepage?: boolean;
 }
 
 const {
   faqItems = [],
   title = "Frequently Asked Questions",
-  subtitle = "Have questions about our Polk County appliance repair services? Find clear answers below."
+  subtitle = "Have questions about our Polk County appliance repair services? Find clear answers below.",
+  isHomepage = false
 } = Astro.props;
 ---
 
@@ -56,7 +58,6 @@ const {
         </div>
       ))}
     </div>
-
   </div>
 </section>
 

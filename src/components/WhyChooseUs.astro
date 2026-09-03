@@ -31,9 +31,15 @@ const features = [
     icon: "M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"
   }
 ];
+
+export interface Props {
+  isHomepage?: boolean;
+}
+
+const { isHomepage } = Astro.props;
 ---
 
-<section class="py-16 sm:py-20 bg-brand-bg">
+<section class="py-16 sm:py-20 bg-white">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center max-w-3xl mx-auto mb-14">
       <h2 class="text-xs font-bold uppercase tracking-widest text-brand-amber mb-2">Why Polk County Trusts Us</h2>
@@ -41,26 +47,48 @@ const features = [
         Engineered for Speed, Precision, & Peace of Mind
       </p>
       <p class="mt-4 text-base text-brand-muted">
-        We combine master trade technical skill with honest Florida hospitality. Here is why homeowners and landlords choose Lakeland Appliance Pro.
+        We combine master trade technical skill with honest Florida hospitality. Here is why homeowners and landlords choose Lakeland Repair.
       </p>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      {features.map((item) => (
-        <div class="bg-white rounded-2xl p-8 border border-gray-100 shadow-md hover:shadow-xl transition-all transform hover:-translate-y-1 group">
-          <div class="w-12 h-12 rounded-xl bg-teal-50 text-brand-teal flex items-center justify-center mb-6 group-hover:bg-brand-amber group-hover:text-slate-900 transition-colors">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={item.icon}/>
-            </svg>
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <!-- Left: High-Quality Image -->
+      <div class="relative rounded-3xl overflow-hidden shadow-2xl h-full min-h-[500px] hidden lg:block">
+        <img 
+          src="/why_us_new.jpg" 
+          alt="Professional Appliance Repair Technician in Polk County" 
+          class="absolute inset-0 w-full h-full object-cover object-top"
+          loading="lazy"
+        />
+        <div class="absolute inset-0 bg-gradient-to-t from-brand-teal-dark via-transparent to-transparent opacity-80"></div>
+        <div class="absolute bottom-8 left-8 right-8">
+          <div class="bg-white/10 backdrop-blur-md border border-white/20 p-6 rounded-2xl">
+            <p class="text-white font-bold text-lg mb-1">"They saved my Thanksgiving!"</p>
+            <p class="text-gray-300 text-sm">- Sarah M., South Lakeland</p>
           </div>
-          <h3 class="text-xl font-heading font-bold text-brand-text mb-3">
-            {item.title}
-          </h3>
-          <p class="text-sm text-brand-muted leading-relaxed">
-            {item.description}
-          </p>
         </div>
-      ))}
+      </div>
+
+      <!-- Right: Feature List -->
+      <div class="space-y-4">
+        {features.map((item) => (
+          <div class="flex items-start gap-5 group p-5 rounded-2xl border border-transparent hover:border-brand-teal/10 hover:shadow-xl hover:bg-white transition-all duration-300">
+            <div class="w-12 h-12 rounded-xl bg-teal-50 text-brand-teal flex items-center justify-center flex-shrink-0 group-hover:bg-brand-amber group-hover:text-brand-teal-dark transition-colors duration-300 shadow-sm border border-teal-100">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={item.icon}/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-xl font-heading font-extrabold text-brand-teal-dark mb-2 group-hover:text-brand-teal transition-colors duration-300">
+                {item.title}
+              </h3>
+              <p class="text-sm text-gray-600 leading-relaxed">
+                {item.description}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   </div>
 </section>

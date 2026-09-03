@@ -1,7 +1,8 @@
 import { defineCollection, z } from 'astro:content';
+import { glob } from 'astro/loaders';
 
 const servicesCollection = defineCollection({
-  type: 'content',
+  loader: glob({ pattern: "**/*.md", base: "./src/content/services" }),
   schema: z.object({
     title: z.string(),
     shortDescription: z.string(),
@@ -14,6 +15,33 @@ const servicesCollection = defineCollection({
       })
     ),
     brandsServiced: z.array(z.string()),
+    comprehensiveCoverage: z.array(
+      z.object({
+        title: z.string(),
+        description: z.string(),
+        bullets: z.array(z.string()).optional()
+      })
+    ).optional(),
+    diagnosticGuide: z.array(
+      z.object({
+        symptom: z.string(),
+        title: z.string(),
+        description: z.string(),
+        solution: z.string()
+      })
+    ).optional(),
+    technicalStandards: z.array(
+      z.object({
+        title: z.string(),
+        description: z.string()
+      })
+    ).optional(),
+    advantages: z.array(
+      z.object({
+        title: z.string(),
+        description: z.string()
+      })
+    ).optional(),
     faq: z.array(
       z.object({
         question: z.string(),
@@ -24,7 +52,7 @@ const servicesCollection = defineCollection({
 });
 
 const areasCollection = defineCollection({
-  type: 'content',
+  loader: glob({ pattern: "**/*.md", base: "./src/content/areas" }),
   schema: z.object({
     title: z.string(),
     zip: z.union([z.string(), z.array(z.string())]),

@@ -3,7 +3,7 @@ title: "Bartow"
 slug: "bartow"
 zip: "33830"
 responseTime: "60-90 mins"
-whyChooseUs: "As the county seat of Polk County, Bartow combines historic civic charm with active family neighborhoods. Lakeland Appliance Pro provides complete kitchen and laundry repair solutions to Bartow residents along US 98 and Broadway Ave."
+whyChooseUs: "As the county seat of Polk County, Bartow combines historic civic charm with active family neighborhoods. Lakeland Repair provides complete kitchen and laundry repair solutions to Bartow residents along US 98 and Broadway Ave."
 neighborhoods:
   - "Historic Bartow Residential District"
   - "Broadway Ave Corridor"

@@ -1,0 +1,24 @@
+---
+export interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<section class="relative bg-brand-teal pt-28 pb-16 overflow-hidden">
+  <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] mix-blend-overlay"></div>
+  <div class="absolute inset-0 bg-gradient-to-br from-brand-teal via-teal-800 to-brand-teal-dark opacity-90"></div>
+  
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-heading font-extrabold text-white tracking-tight mb-4 drop-shadow-md">
+      {title}
+    </h1>
+    {description && (
+      <p class="text-lg sm:text-xl text-teal-100 max-w-2xl mx-auto font-medium">
+        {description}
+      </p>
+    )}
+  </div>
+</section>

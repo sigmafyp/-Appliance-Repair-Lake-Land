@@ -41,7 +41,65 @@ faq:
     answer: "Keep refrigerator and freezer doors firmly closed to trap residual cold air. High-perishables can be transferred to a cooler with bagged ice."
   - question: "Do you supply genuine OEM factory parts?"
     answer: "Yes, we use original manufacturer replacement parts backed by our 90-day parts and labor warranty."
+comprehensiveCoverage:
+  - title: "French Door Refrigerators"
+    description: "Complex dual-evaporator systems, multi-zone climate drawers, and through-the-door ice/water dispenser electronics. We troubleshoot PCB inverter boards and damper motors."
+    bullets:
+      - "Dual evaporator coil frost clearing"
+      - "In-door dispenser wiring & valve fixes"
+      - "Pantry drawer temperature calibration"
+  - title: "Side-by-Side Refrigerators"
+    description: "Addressing air balance channels between freezer and fresh food zones, ice maker auger motor jams, defrost timer failures, and sealed system pressure imbalances."
+    bullets:
+      - "Air baffle & motorized damper replacement"
+      - "Ice auger motor & solenoid repair"
+      - "Defrost bimetal thermostat testing"
+  - title: "Built-In & Luxury Column Units"
+    description: "Specialized factory-level repair for high-end brands like Sub-Zero, Viking, Thermador, and Monogram. We handle dual compressor overhauls and micro-climate control."
+    bullets:
+      - "Sub-Zero dual compressor servicing"
+      - "Vacuum condenser coil clearing"
+      - "High-precision micro-sensor tuning"
+  - title: "Smart & Linear Inverter Fridges"
+    description: "Modern LG Linear and Samsung Digital Inverter systems requiring specialized frequency modulation testing, firmware error code resets, and inverter board diagnostics."
+    bullets:
+      - "Inverter drive board signal diagnostics"
+      - "Error code clearing & firmware resets"
+      - "Smart sensor thermistor calibration"
+diagnosticGuide:
+  - symptom: "Cooling Failure"
+    title: "Refrigerator Warm, Food Spoiling"
+    description: "Triggered by a burnt PTC compressor start relay, seized condenser fan motor, clogged condenser coils, or a failed electronic control board not sending power."
+    solution: "Digital multimeter ohm testing, capacitor replacement, airflow coil flush, and OEM board programming."
+  - symptom: "Airflow Blockage"
+    title: "Freezer Cold But Fresh Food Section Warm"
+    description: "Caused by heavy frost accumulation over the evaporator coils due to a broken defrost heater element, defective bimetal thermostat, or a jammed motorized air diffuser damper."
+    solution: "Complete steam defrost, continuity check of heater coil, thermal sensor replacement, and damper motor rebuild."
+  - symptom: "Water Leakage"
+    title: "Water Pooling on Floor or Under Crispers"
+    description: "A frozen or obstructed defrost drain channel forces condensate water into the bottom crisper drawers. Cracked dual-water inlet valves or brittle supply lines cause puddle leaks."
+    solution: "High-pressure thermal drain flush, drain trough heat probe installation, and reinforced braided water line fittings."
+  - symptom: "Unusual Noises"
+    title: "Loud Clicking, Buzzing, or Rattling Noises"
+    description: "Repeated clicking every 2-3 minutes indicates the compressor is tripping its thermal overload. Buzzing often stems from a bent evaporator fan blade striking ice."
+    solution: "Thermal overload & hard-start capacitor rebuild, evaporator fan motor balance, and compressor vibration isolator mounting."
+technicalStandards:
+  - title: "Digital Multimeter & Oscilloscope Testing"
+    description: "We test PCB inverter board output frequencies, thermistor resistance curves, and relay contacts to isolate electronic failures accurately rather than guessing."
+  - title: "Compressor & Filter Drier Replacement"
+    description: "When a compressor burns out or valves fail, we perform high-vacuum pump evacuations, install new solid-core filter driers, and braze high-pressure copper joints."
+  - title: "Precision Refrigerant Recovery"
+    description: "Using EPA-certified digital scales, we charge exact factory-specified ounces of eco-friendly R134a or R600a isobutane for optimal COP efficiency."
+advantages:
+  - title: "Dedicated Food Rescue Priority"
+    description: "We treat total cooling failures as urgent priorities, offering same-day diagnostic windows to save hundreds of dollars in perishable groceries."
+  - title: "Advanced Inverter & Smart Tech Knowledge"
+    description: "Our technicians receive ongoing training on linear inverter compressors, smart Wi-Fi diagnostics, and variable-speed fan controls."
+  - title: "Floor & Kitchen Protection"
+    description: "Refrigerators are heavy and kitchen flooring is delicate. We use specialized air sleds, heavy-duty neoprene runners, and clean shoe covers on every job."
+  - title: "Original Manufacturer (OEM) Parts"
+    description: "We do not use cheap generic components. Every replacement relay, fan motor, heater, or valve meets or exceeds factory specifications."
 ---
 # Refrigerator Repair Services in Lakeland, FL
 
-When your kitchen refrigerator stops cooling in Central Florida heat, every hour counts. Lakeland Appliance Pro provides rapid, licensed repair services for all major built-in and freestanding refrigerator models.
+When your kitchen refrigerator stops cooling in Central Florida heat, every hour counts. Lakeland Repair provides rapid, licensed repair services for all major built-in and freestanding refrigerator models.

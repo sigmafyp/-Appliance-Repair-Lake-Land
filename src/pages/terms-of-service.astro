@@ -1,50 +1,71 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import Breadcrumb from '../components/Breadcrumb.astro';
 
-const pageTitle = "Terms of Service | Lakeland Appliance Pro";
-const pageDescription = "Terms of service and repair agreement terms for Lakeland Appliance Pro customers.";
+const pageTitle = "Terms of Service | Lakeland Repair";
+const pageDescription = "Terms of service and repair agreement terms for Lakeland Repair customers.";
 ---
 
 <BaseLayout title={pageTitle} description={pageDescription}>
   
-  <Breadcrumb items={[{ name: 'Terms of Service' }]} />
-
-  <section class="py-16 bg-white border-b border-gray-100">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 prose prose-slate text-sm text-brand-muted">
-      
-      <h1 class="text-3xl font-heading font-extrabold text-brand-teal mb-6">
+  <!-- Custom Legal Hero -->
+  <section class="relative bg-brand-teal text-white overflow-hidden py-16 lg:py-24 border-b border-teal-800">
+    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-teal-700/40 via-brand-teal-dark to-brand-teal-dark z-0"></div>
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+      <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-teal-800/80 border border-teal-600/50 text-teal-100 text-xs font-semibold tracking-wide uppercase mb-6">
+        <svg class="w-4 h-4 text-brand-amber" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+        <span>Legal Documentation</span>
+      </div>
+      <h1 class="text-4xl sm:text-5xl font-heading font-extrabold text-white tracking-tight mb-4">
         Terms of Service
       </h1>
-      <p class="text-xs text-gray-500 mb-8">
-        Last Updated: January 1, 2026
-      </p>
+      <p class="text-teal-100/80 text-sm">Last Updated: January 1, 2026</p>
+    </div>
+  </section>
 
-      <h2 class="text-lg font-bold text-brand-text mt-6 mb-2">1. Scope of Service</h2>
-      <p>
-        Lakeland Appliance Pro provides residential and light commercial appliance diagnostic and repair services across Lakeland and designated Polk County, Florida service areas. All repairs are subject to customer authorization following an itemized diagnostic evaluation.
-      </p>
+  <section class="py-16 sm:py-24 bg-brand-surface">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-white rounded-3xl shadow-xl border border-gray-100 p-8 sm:p-12 lg:p-16">
+        
+        <div class="prose prose-slate prose-lg max-w-none text-gray-600 marker:text-brand-teal">
+          
+          <div class="bg-brand-teal/5 border-l-4 border-brand-teal p-6 rounded-r-2xl mb-12">
+            <p class="m-0 font-medium text-brand-teal-dark">
+              Please read these Terms of Service carefully before utilizing our repair services. These terms outline the agreement between you (the customer) and Lakeland Repair.
+            </p>
+          </div>
 
-      <h2 class="text-lg font-bold text-brand-text mt-6 mb-2">2. Diagnostic Fees & Upfront Pricing</h2>
-      <p>
-        A standard diagnostic service fee applies to cover technician travel, testing, and troubleshooting. If the customer approves the recommended repair work on the same visit, the diagnostic fee is credited directly toward the final invoice total.
-      </p>
+          <h2 class="text-2xl font-heading font-bold text-brand-teal-dark mt-10 mb-4 border-b border-gray-100 pb-4">1. Scope of Service</h2>
+          <p>
+            Lakeland Repair provides residential and light commercial appliance diagnostic and repair services across Lakeland and designated Polk County, Florida service areas. All repairs are subject to customer authorization following an itemized diagnostic evaluation.
+          </p>
 
-      <h2 class="text-lg font-bold text-brand-text mt-6 mb-2">3. 90-Day Parts & Labor Warranty</h2>
-      <p>
-        All completed repairs include a 90-day limited warranty covering replaced factory OEM parts and associated repair labor. The warranty does not cover new unrelated component failures, pre-existing structural damage, power surge incidents, or customer misuse.
-      </p>
+          <h2 class="text-2xl font-heading font-bold text-brand-teal-dark mt-10 mb-4 border-b border-gray-100 pb-4">2. Diagnostic Fees & Upfront Pricing</h2>
+          <p>
+            A standard diagnostic service fee applies to cover technician travel, testing, and troubleshooting. <strong>If the customer approves the recommended repair work on the same visit, the diagnostic fee is credited directly toward the final invoice total.</strong>
+          </p>
 
-      <h2 class="text-lg font-bold text-brand-text mt-6 mb-2">4. Payment Terms</h2>
-      <p>
-        Payment is due in full upon completion of the repair service. We accept major credit cards, debit cards, cash, and corporate checks. Unpaid balances may incur administrative late processing fees.
-      </p>
+          <h2 class="text-2xl font-heading font-bold text-brand-teal-dark mt-10 mb-4 border-b border-gray-100 pb-4">3. 90-Day Parts & Labor Warranty</h2>
+          <p>
+            All completed repairs include a 90-day limited warranty covering replaced factory OEM parts and associated repair labor. The warranty does <strong>not</strong> cover:
+          </p>
+          <ul>
+            <li>New, unrelated component failures.</li>
+            <li>Pre-existing structural damage.</li>
+            <li>Power surge incidents or customer misuse.</li>
+          </ul>
 
-      <h2 class="text-lg font-bold text-brand-text mt-6 mb-2">5. Governing Law</h2>
-      <p>
-        These terms shall be governed by and construed in accordance with the laws of the State of Florida and Polk County jurisdiction.
-      </p>
+          <h2 class="text-2xl font-heading font-bold text-brand-teal-dark mt-10 mb-4 border-b border-gray-100 pb-4">4. Payment Terms</h2>
+          <p>
+            Payment is due in full upon completion of the repair service. We accept major credit cards, debit cards, cash, and corporate checks. Unpaid balances may incur administrative late processing fees.
+          </p>
 
+          <h2 class="text-2xl font-heading font-bold text-brand-teal-dark mt-10 mb-4 border-b border-gray-100 pb-4">5. Governing Law</h2>
+          <p>
+            These terms shall be governed by and construed in accordance with the laws of the State of Florida and Polk County jurisdiction.
+          </p>
+
+        </div>
+      </div>
     </div>
   </section>
 

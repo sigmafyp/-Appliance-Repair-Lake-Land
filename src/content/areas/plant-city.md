@@ -3,7 +3,7 @@ title: "Plant City"
 slug: "plant-city"
 zip: ["33563", "33565", "33566"]
 responseTime: "60-90 mins"
-whyChooseUs: "Just across the Polk-Hillsborough county line, Plant City residents rely on Lakeland Appliance Pro for expert appliance diagnostics. Whether you live near Historic Downtown Plant City or rural agricultural properties, our dispatch team brings trade expertise straight to your front door."
+whyChooseUs: "Just across the Polk-Hillsborough county line, Plant City residents rely on Lakeland Repair for expert appliance diagnostics. Whether you live near Historic Downtown Plant City or rural agricultural properties, our dispatch team brings trade expertise straight to your front door."
 neighborhoods:
   - "Historic Downtown Plant City"
   - "Walden Lake"

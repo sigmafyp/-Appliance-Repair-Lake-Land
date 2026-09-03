@@ -16,7 +16,7 @@ const currentUrl = canonicalUrl || Astro.url.href;
 const baseLocalBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "HomeAndConstructionBusiness",
-  "name": "Lakeland Appliance Pro",
+  "name": "Lakeland Repair",
   "image": "https://lakelandappliancepro.com/images/hero-tech.jpg",
   "@id": "https://lakelandappliancepro.com/#organization",
   "url": "https://lakelandappliancepro.com",
@@ -58,8 +58,11 @@ const schemasToInject = schema
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
     <meta name="generator" content={Astro.generator} />
+
+    <!-- AOS Animation CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <!-- Title & Meta -->
     <title>{title}</title>
@@ -71,7 +74,7 @@ const schemasToInject = schema
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={currentUrl} />
-    <meta property="og:site_name" content="Lakeland Appliance Pro" />
+    <meta property="og:site_name" content="Lakeland Repair" />
 
     <!-- JSON-LD Schema Markup -->
     {schemasToInject.map((s) => (
@@ -84,5 +87,18 @@ const schemasToInject = schema
       <slot />
     </main>
     <Footer />
+    
+    <!-- AOS Animation JS -->
+    <script is:inline src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script is:inline>
+      document.addEventListener('DOMContentLoaded', function() {
+        AOS.init({
+          duration: 800,
+          once: true,
+          offset: 100,
+          easing: 'ease-out-cubic'
+        });
+      });
+    </script>
   </body>
 </html>

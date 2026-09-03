@@ -1,24 +1,33 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import ServicesGrid from '../../components/ServicesGrid.astro';
+import PageHeader from '../../components/PageHeader.astro';
 import CtaBanner from '../../components/CtaBanner.astro';
 
-const pageTitle = "Our Appliance Repair Services | Lakeland Appliance Pro";
+const pageTitle = "Our Appliance Repair Services | Lakeland Repair";
 const pageDescription = "Comprehensive appliance repair services in Lakeland, FL. We fix refrigerators, washers, dryers, ovens, and more. Same-day service available.";
+
+import ServicesGrid from '../../components/ServicesGrid.astro';
 ---
 
 <BaseLayout title={pageTitle} description={pageDescription}>
   
-  <section class="bg-brand-teal-dark text-white py-16 md:py-24">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h1 class="text-4xl md:text-5xl font-extrabold mb-6">Our Repair Services</h1>
-      <p class="text-xl text-teal-100 max-w-3xl mx-auto leading-relaxed">
-        We provide expert, same-day repair for all major household appliances. Find your appliance below to learn more about our specialized services.
+
+  <!-- Custom Services Hero -->
+  <section class="relative bg-brand-teal text-white overflow-hidden py-16 lg:py-24 border-b border-teal-800">
+    <div class="absolute inset-0 bg-gradient-to-br from-brand-teal-dark to-brand-teal z-0"></div>
+    <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-brand-teal-light/20 rounded-full blur-3xl -mr-32 -mt-32 pointer-events-none z-0"></div>
+    
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-heading font-extrabold text-white tracking-tight mb-6">
+        Our Repair Services
+      </h1>
+      <p class="text-xl text-teal-50/90 max-w-3xl mx-auto mb-10 leading-relaxed">
+        We provide expert, same-day repair for all major household appliances. Select your appliance below for detailed pricing and timelines.
       </p>
     </div>
   </section>
 
-  <ServicesGrid />
+  <ServicesGrid hideHeader={true} />
 
   <CtaBanner />
 

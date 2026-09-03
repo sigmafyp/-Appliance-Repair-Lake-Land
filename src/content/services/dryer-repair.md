@@ -38,7 +38,49 @@ faq:
     answer: "Clean the lint trap after every load and have your external exhaust ductwork professionally cleared once a year."
   - question: "How much does a typical dryer heating element repair cost?"
     answer: "We provide flat-rate upfront quotes prior to starting. Repairs are significantly cheaper than purchasing a new dryer."
+comprehensiveCoverage:
+  - title: "Electric Dryers"
+    description: "High-voltage 240V diagnostics. We replace burnt heating elements, thermal fuses, and faulty cycling thermostats."
+    bullets:
+      - "Nichrome heating element replacement"
+      - "Thermal fuse & limit switch testing"
+      - "240V terminal block repair"
+  - title: "Gas Dryers"
+    description: "Safe handling of natural gas components. We troubleshoot weak gas valve coils, faulty igniters, and radiant flame sensors."
+    bullets:
+      - "Gas valve solenoid coil replacement"
+      - "Silicon carbide igniter installation"
+      - "Radiant sensor continuity testing"
+  - title: "Ventless & Heat Pump Dryers"
+    description: "Modern high-efficiency condensation systems requiring specialized evaporator cleaning and secondary lint filter clearing."
+    bullets:
+      - "Condenser coil deep cleaning"
+      - "Heat pump refrigerant loop checks"
+      - "Moisture sensor calibration"
+diagnosticGuide:
+  - symptom: "No Heat"
+    title: "Dryer Tumbling But Clothes Are Cold"
+    description: "In electric models, a broken heating element or blown thermal fuse. In gas models, weak valve coils or a failed hot surface igniter."
+    solution: "Multimeter continuity testing of the thermal circuit, OEM element/igniter installation, and vent airflow testing."
+  - symptom: "Squeaking Noises"
+    title: "Loud Grinding or Squealing"
+    description: "Worn drum support rollers, a frayed idler pulley, or a drying out drum glide bearing creating metal-on-metal friction."
+    solution: "Complete drum extraction, roller and tensioner replacement, and high-temp synthetic lubrication."
+  - symptom: "Long Dry Times"
+    title: "Takes Multiple Cycles to Dry"
+    description: "A severely restricted exhaust vent, a clogged internal blower wheel, or corroded moisture sensors failing to detect dampness."
+    solution: "Internal blower vacuuming, moisture sensor polishing, and anemometer airflow verification."
+technicalStandards:
+  - title: "Thermal Circuit Continuity Mapping"
+    description: "We map the entire heating circuit—from the timer to the high-limit thermostat—using digital multimeters to find the exact break in continuity."
+  - title: "Anemometer Airflow Testing"
+    description: "We measure the Cubic Feet per Minute (CFM) of exhaust air to guarantee your dryer is venting safely and efficiently."
+advantages:
+  - title: "Fire Prevention Safety"
+    description: "A clogged dryer is the #1 cause of house fires. We clear internal lint buildup during every repair to ensure your family's safety."
+  - title: "Same-Day Element Replacement"
+    description: "We carry heating elements and gas coils for all major brands on our vans, getting your laundry routine back on track immediately."
 ---
 # Reliable Clothes Dryer Repair in Lakeland, FL
 
-Skip the laundromat trip. Lakeland Appliance Pro provides fast gas and electric dryer repairs throughout Lakeland and surrounding Polk County towns.
+Skip the laundromat trip. Lakeland Repair provides fast gas and electric dryer repairs throughout Lakeland and surrounding Polk County towns.

@@ -38,6 +38,48 @@ faq:
     answer: "Electrical shorts inside the element coil shell cause localization heat spikes that melt the outer sheath."
   - question: "Do you repair high-end luxury ranges like Wolf and Viking?"
     answer: "Yes, our technicians are trained in premium residential commercial-style ranges."
+comprehensiveCoverage:
+  - title: "Gas Ovens & Ranges"
+    description: "Precision calibration of gas valves, weak bake igniters, and safety valve troubleshooting to ensure safe, even cooking temperatures."
+    bullets:
+      - "Bake & broil igniter replacement"
+      - "Gas pressure regulator testing"
+      - "Burner orifice cleaning"
+  - title: "Electric & Convection Ovens"
+    description: "High-voltage diagnostics for burnt bake elements, shorted control boards, and noisy convection fan motors."
+    bullets:
+      - "Hidden bake element replacement"
+      - "Convection fan motor rebuilds"
+      - "Electronic control board (ERC) repair"
+  - title: "Double Wall Ovens"
+    description: "Complex integrated units requiring heavy-duty extraction tools and dual-zone temperature sensor calibration."
+    bullets:
+      - "Dual thermistor calibration"
+      - "Heavy-door hinge replacement"
+      - "Cooling fan thermal switch repair"
+diagnosticGuide:
+  - symptom: "Heating Failure"
+    title: "Oven Won't Heat or Pre-Heat is Slow"
+    description: "A weak gas igniter that glows but doesn't open the safety valve, or a blistered and shorted electric bake element."
+    solution: "Amp-draw testing on gas igniters, visual element inspection, and OEM part replacement."
+  - symptom: "Uneven Baking"
+    title: "Food Burning on Bottom, Raw on Top"
+    description: "A failing temperature sensor (thermistor) sending incorrect ohms to the board, or a dead convection fan motor."
+    solution: "Thermistor resistance curve testing, digital recalibration of the control board, and convection fan replacement."
+  - symptom: "Door Won't Open"
+    title: "Locked Shut After Self-Clean"
+    description: "The high heat of the self-cleaning cycle warped the door latch mechanism or burnt out the main relay board."
+    solution: "Manual latch override, motorized lock assembly replacement, and thermal fuse reset."
+technicalStandards:
+  - title: "Digital Laser Thermography"
+    description: "We use infrared laser thermometers to map the exact heat distribution inside your oven cavity, ensuring perfect 350°F calibration."
+  - title: "Amp-Draw Igniter Diagnostics"
+    description: "Instead of guessing, we use clamp-on ammeters to verify if a gas igniter is pulling the required 3.2 to 3.6 amps to open the safety valve."
+advantages:
+  - title: "Holiday & Event Priority"
+    description: "We know a broken oven ruins Thanksgiving or dinner parties. We prioritize oven repairs to save your special events."
+  - title: "High-Temp Safety Protocols"
+    description: "We ensure all high-limit thermal fuses and cooling fans are operating perfectly to protect your kitchen cabinetry from heat damage."
 ---
 # Precision Oven & Range Repair in Lakeland, FL
 
