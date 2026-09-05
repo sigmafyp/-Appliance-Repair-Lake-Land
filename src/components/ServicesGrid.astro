@@ -2,7 +2,7 @@
 const services = [
   {
     slug: 'refrigerator-repair',
-    name: 'Refrigerator Repair',
+    name: 'Emergency Refrigerator & Freezer Repair',
     description: 'Expert diagnostics for cooling failures, compressor issues, and water dispenser leaks.',
     icon: '🧊',
     image: '/images/services/refrigerator-repair.jpg',
@@ -10,7 +10,7 @@ const services = [
   },
   {
     slug: 'freezer-repair',
-    name: 'Freezer Repair',
+    name: 'Deep Freezer & Chest Freezer Repair',
     description: 'Fast repair for frost buildup, click-on start relays, and temp fluctuations.',
     icon: '❄️',
     image: '/images/services/freezer-repair.jpg',
@@ -18,7 +18,7 @@ const services = [
   },
   {
     slug: 'washer-repair',
-    name: 'Washer Repair',
+    name: 'Washing Machine Repair & Diagnostics',
     description: 'Resolving spin cycle failures, standing water, violent vibration, and door locks.',
     icon: '🧺',
     image: '/images/services/washer-repair.jpg',
@@ -26,7 +26,7 @@ const services = [
   },
   {
     slug: 'dryer-repair',
-    name: 'Dryer Repair',
+    name: 'Gas & Electric Clothes Dryer Repair',
     description: 'Fixing no-heat symptoms, broken drive belts, thermal fuses, and loud squeaking.',
     icon: '🔥',
     image: '/images/services/dryer-repair.jpg',
@@ -34,7 +34,7 @@ const services = [
   },
   {
     slug: 'oven-range-repair',
-    name: 'Oven & Range Repair',
+    name: 'Oven, Stove & Cooking Range Repair',
     description: 'Calibrating uneven temperatures, faulty igniters, element burnt-outs, and control boards.',
     icon: '🍳',
     image: '/images/services/oven-range-repair.jpg',
@@ -42,7 +42,7 @@ const services = [
   },
   {
     slug: 'stove-repair',
-    name: 'Stove Repair',
+    name: 'Gas Burner & Electric Stove Repair',
     description: 'Gas valve repairs, electric burner replacement, and spark module troubleshooting.',
     icon: '⚡',
     image: '/images/services/stove-repair.jpg',
@@ -50,7 +50,7 @@ const services = [
   },
   {
     slug: 'cooktop-repair',
-    name: 'Cooktop Repair',
+    name: 'Induction & Ceramic Cooktop Repair',
     description: 'Smooth-top glass burner fixes, induction zone repairs, and surface controls.',
     icon: '🍳',
     image: '/images/services/cooktop-repair.jpg',
@@ -58,7 +58,7 @@ const services = [
   },
   {
     slug: 'dishwasher-repair',
-    name: 'Dishwasher Repair',
+    name: 'Built-In Dishwasher Repair Service',
     description: 'Fixing cloudy glassware, spray arm clogs, door latch leaks, and pump drains.',
     icon: '🍽️',
     image: '/images/services/dishwasher-repair.jpg',
@@ -66,7 +66,7 @@ const services = [
   },
   {
     slug: 'microwave-repair',
-    name: 'Microwave Repair',
+    name: 'Built-In Microwave & Speed Oven Repair',
     description: 'Magnetron replacements, turntable repairs, door switch safety, and keypads.',
     icon: '📻',
     image: '/images/services/microwave-repair.jpg',
@@ -74,7 +74,7 @@ const services = [
   },
   {
     slug: 'ice-maker-repair',
-    name: 'Ice Maker Repair',
+    name: 'Automatic Ice Maker & Machine Repair',
     description: 'Solving hollow cubes, water valve jams, mechanical ejectors, and slow production.',
     icon: '🧊',
     image: '/images/services/ice-maker-repair.jpg',
@@ -82,7 +82,7 @@ const services = [
   },
   {
     slug: 'range-hood-repair',
-    name: 'Range Hood Repair',
+    name: 'Kitchen Range Hood & Vent Fan Repair',
     description: 'Exhaust fan motor fixes, grease duct cleaning, light fixtures, and multi-speed switches.',
     icon: '🌬️',
     image: '/images/services/range-hood-repair.jpg',
@@ -90,7 +90,7 @@ const services = [
   },
   {
     slug: 'garbage-disposal-repair',
-    name: 'Garbage Disposal Repair',
+    name: 'Garbage Disposal Repair & Unjamming',
     description: 'Unjamming flywheels, sealing sink flange leaks, and resetting reset buttons.',
     icon: '♻️',
     image: '/images/services/garbage-disposal-repair.jpg',
@@ -98,7 +98,7 @@ const services = [
   },
   {
     slug: 'commercial-appliance-repair',
-    name: 'Commercial Appliance Repair',
+    name: 'Commercial Refrigeration & Appliance Repair',
     description: 'Heavy-duty restaurant, laundromat, and rental property appliance maintenance.',
     icon: '🏢',
     image: '/images/services/commercial-appliance-repair.jpg',
@@ -167,14 +167,27 @@ const displayServices = limit ? services.slice(0, limit) : services;
               ))}
             </ul>
             
-            <!-- Action Button -->
-            <div class="mt-auto pt-2">
+            <!-- Action Buttons: Call Now (Dark) + View Details -->
+            <div class="mt-auto pt-3 flex items-center gap-2">
+              <a 
+                href="tel:8635550123"
+                class="flex-1 inline-flex items-center justify-center gap-1.5 px-3 py-3 rounded-xl bg-brand-teal-dark hover:bg-slate-950 text-white font-bold text-xs shadow-md transition-all group/call"
+                aria-label={`Call to repair ${s.name}`}
+              >
+                <svg class="w-3.5 h-3.5 text-brand-amber group-hover/call:animate-bounce flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                </svg>
+                <span>Call Now</span>
+              </a>
+
               <a 
                 href={`/services/${s.slug}/`}
-                class="flex items-center justify-between w-full text-sm font-bold text-white bg-brand-teal hover:bg-brand-teal-dark rounded-xl px-5 py-3.5 transition-all shadow-md group/btn"
+                class="flex-1 inline-flex items-center justify-center gap-1 px-3 py-3 rounded-xl border border-brand-teal/30 bg-teal-50/50 hover:bg-brand-teal hover:border-brand-teal text-brand-teal hover:text-white font-bold text-xs transition-all shadow-sm group/view"
               >
-                <span>Explore Details</span>
-                <svg class="w-4 h-4 transform group-hover/btn:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                <span>View Details</span>
+                <svg class="w-3.5 h-3.5 group-hover/view:translate-x-0.5 transition-transform flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/>
+                </svg>
               </a>
             </div>
           </div>

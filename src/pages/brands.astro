@@ -1,0 +1,173 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHeader from '../components/PageHeader.astro';
+import CtaBanner from '../components/CtaBanner.astro';
+
+const pageTitle = "Major Appliance Brands We Service | Lakeland & Polk County, FL";
+const pageDescription = "Certified repair service for Whirlpool, Sub-Zero, GE, Samsung, LG, Bosch, KitchenAid, Viking, Maytag, and more across Polk County. Call (863) 555-0123.";
+
+const brandTiers = [
+  {
+    tier: "Popular Household Brands",
+    description: "Everyday residential kitchen and laundry workhorses serviced with authentic OEM parts.",
+    brands: [
+      { name: "Whirlpool", specialty: "Washers, Dryers, Refrigerators, Ranges", popularParts: "Water pumps, drive belts, heating coils, electronic control boards" },
+      { name: "GE & GE Profile", specialty: "French-Door Fridges, Double Ovens, Dishwashers", popularParts: "Inverter control boards, bake elements, spark modules, ice makers" },
+      { name: "Samsung", specialty: "Smart Refrigerators, VRT Washers, Electric Dryers", popularParts: "Defrost sensors, drain pumps, thermal fuses, door boot seals" },
+      { name: "LG", specialty: "Direct-Drive Washers, Linear Compressor Refrigerators", popularParts: "Inverter linear compressors, hall sensors, spider arm brackets" },
+      { name: "Maytag", specialty: "Commercial-Grade Washers, Heavy-Duty Dryers", popularParts: "Transmission bearings, drum rollers, centrifugal start switches" },
+      { name: "Frigidaire & Gallery", specialty: "Gallery French-Door Fridges, Gas Ranges, Dishwashers", popularParts: "Defrost timers, evaporator fans, gas safety valves, door gaskets" },
+    ]
+  },
+  {
+    tier: "Luxury & High-End Gourmet Brands",
+    description: "Complex refrigeration and professional high-BTU cooking ranges handled by master technicians.",
+    brands: [
+      { name: "Sub-Zero", specialty: "Built-In & Integrated Refrigerators, Wine Storage", popularParts: "Dual compressors, evaporator coils, digital microprocessor boards" },
+      { name: "Wolf", specialty: "Dual-Fuel Ranges, Gas Cooktops, Convection Wall Ovens", popularParts: "Surface burner spark igniters, convection fan motors, thermostat sensors" },
+      { name: "Bosch & Thermador", specialty: "Whisper-Quiet 800 Series Dishwashers, Induction Cooktops", popularParts: "Heat pumps, water circulation impellers, touch-sensor glass panels" },
+      { name: "Viking", specialty: "Professional Gas Ranges, Commercial-Style Hoods", popularParts: "Spark reignition modules, high-output gas burner valves, oven igniters" },
+      { name: "KitchenAid", specialty: "Architect Series Dishwashers, Built-In Refrigerators", popularParts: "Upper spray arm assemblies, door springs, filtration pumps" },
+      { name: "Miele", specialty: "European Laundry Care, Precision Built-In Dishwashers", popularParts: "TwinDos dispensing valves, drain motors, waterproof float switches" },
+    ]
+  }
+];
+
+const brandFaqs = [
+  {
+    question: "Do you use authentic manufacturer OEM parts for repairs?",
+    answer: "Yes. We exclusively install genuine factory OEM components engineered specifically for your appliance model to protect warranty coverage, equipment lifespan, and safety."
+  },
+  {
+    question: "Are your technicians certified to work on smart and digital appliance control boards?",
+    answer: "Yes, all of our technicians undergo recurring factory training on computerized inverter modules, Wi-Fi connectivity errors, and digital diagnostic codes for Samsung, LG, Whirlpool, and Sub-Zero."
+  },
+  {
+    question: "What if my appliance is still under manufacturer factory warranty?",
+    answer: "If your unit is less than one year old, we advise checking with your manufacturer. For appliances past the initial factory period or purchased through retailers, we provide full warranty-backed independent repair."
+  },
+  {
+    question: "Do you stock repair parts on your service vans?",
+    answer: "Yes, our mobile inventory includes over 500 of the most frequently failed components across Whirlpool, GE, Samsung, and Bosch to maximize same-day repair completion."
+  }
+];
+
+const brandsSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Appliance Brand Repair Services",
+  "provider": {
+    "@type": "HomeAndConstructionBusiness",
+    "name": "Lakeland Repair"
+  },
+  "areaServed": "Lakeland & Polk County, FL",
+  "description": pageDescription
+};
+---
+
+<BaseLayout title={pageTitle} description={pageDescription} schema={brandsSchema}>
+  <PageHeader 
+    title="Major Appliance Brands We Service" 
+    description="Certified master technicians equipped with genuine factory OEM parts for all major American and European appliance manufacturers." 
+  />
+
+  <!-- Main Brand Listings -->
+  <section class="py-16 sm:py-24 bg-white border-b border-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-20">
+      
+      {brandTiers.map((tier) => (
+        <div>
+          <div class="max-w-3xl mb-10">
+            <span class="text-xs font-bold uppercase tracking-widest text-brand-amber block mb-2">
+              Factory Grade Support
+            </span>
+            <h2 class="text-3xl font-heading font-extrabold text-brand-teal">
+              {tier.tier}
+            </h2>
+            <p class="text-sm sm:text-base text-brand-muted mt-2">
+              {tier.description}
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {tier.brands.map((b) => (
+              <div class="bg-brand-surface rounded-2xl p-6 border border-gray-200 shadow-sm hover:shadow-md transition-all flex flex-col justify-between group hover:border-brand-teal">
+                <div>
+                  <div class="flex items-center justify-between mb-4">
+                    <h3 class="text-xl font-heading font-bold text-brand-text group-hover:text-brand-teal transition-colors">
+                      {b.name}
+                    </h3>
+                    <span class="text-[10px] font-bold bg-teal-100 text-brand-teal-dark px-2.5 py-1 rounded-full uppercase tracking-wider">
+                      Certified Parts
+                    </span>
+                  </div>
+
+                  <div class="mb-4">
+                    <span class="text-xs text-brand-muted block font-semibold mb-1">Specialty Systems:</span>
+                    <p class="text-xs text-gray-700 font-medium">{b.specialty}</p>
+                  </div>
+
+                  <div class="mb-6">
+                    <span class="text-xs text-brand-muted block font-semibold mb-1">Commonly Stocked Replacements:</span>
+                    <p class="text-xs text-gray-600 leading-relaxed">{b.popularParts}</p>
+                  </div>
+                </div>
+
+                <div class="flex items-center gap-2 pt-4 border-t border-gray-200/80">
+                  <a
+                    href="tel:8635550123"
+                    class="flex-1 text-center py-2.5 px-3 rounded-xl bg-brand-teal-dark hover:bg-slate-950 text-white font-bold text-xs shadow-sm transition-colors flex items-center justify-center gap-1.5"
+                  >
+                    <svg class="w-3.5 h-3.5 text-brand-amber" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                    </svg>
+                    Call Now
+                  </a>
+                  <a
+                    href="/contact/"
+                    class="flex-1 text-center py-2.5 px-3 rounded-xl border border-brand-teal/30 bg-teal-50/50 hover:bg-brand-teal text-brand-teal hover:text-white font-bold text-xs transition-colors"
+                  >
+                    Check Availability
+                  </a>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      ))}
+
+    </div>
+  </section>
+
+  <!-- Brand FAQs -->
+  <section class="py-16 sm:py-24 bg-brand-surface border-b border-gray-100">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <span class="text-brand-amber font-bold tracking-widest uppercase text-xs">Questions & Answers</span>
+        <h2 class="text-3xl font-heading font-extrabold text-brand-teal mt-2">
+          Brand Service & Warranty FAQs
+        </h2>
+      </div>
+
+      <div class="space-y-4">
+        {brandFaqs.map((faq) => (
+          <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm">
+            <h3 class="text-base font-heading font-bold text-brand-teal-dark mb-2">
+              {faq.question}
+            </h3>
+            <p class="text-xs sm:text-sm text-brand-muted leading-relaxed">
+              {faq.answer}
+            </p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <CtaBanner 
+    headline="Have a Broken Brand Appliance in Polk County?"
+    subhead="From Samsung and Whirlpool to high-end Sub-Zero and Wolf units, our licensed master technicians are ready to dispatch today."
+    secondaryText="View Service Areas"
+    secondaryHref="/areas/"
+  />
+</BaseLayout>

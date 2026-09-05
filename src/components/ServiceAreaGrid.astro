@@ -3,6 +3,10 @@ const areas = [
   { slug: 'downtown-lakeland', name: 'Downtown Lakeland', zip: '33801', responseTime: '30-60 mins' },
   { slug: 'south-lakeland', name: 'South Lakeland', zip: '33813', responseTime: '45-60 mins' },
   { slug: 'winter-haven', name: 'Winter Haven', zip: '33880', responseTime: '45-90 mins' },
+  { slug: 'haines-city', name: 'Haines City', zip: '33844', responseTime: '45-75 mins' },
+  { slug: 'lake-wales', name: 'Lake Wales', zip: '33853', responseTime: '50-80 mins' },
+  { slug: 'davenport', name: 'Davenport', zip: '33837', responseTime: '45-75 mins' },
+  { slug: 'polk-city', name: 'Polk City', zip: '33868', responseTime: '30-50 mins' },
   { slug: 'plant-city', name: 'Plant City', zip: '33563', responseTime: '60-90 mins' },
   { slug: 'auburndale', name: 'Auburndale', zip: '33823', responseTime: '45-75 mins' },
   { slug: 'mulberry', name: 'Mulberry', zip: '33860', responseTime: '45-75 mins' },
@@ -34,8 +38,9 @@ const displayAreas = limit ? areas.slice(0, limit) : areas;
 
     <div class={`grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 ${limit === 8 ? 'lg:grid-cols-4' : 'lg:grid-cols-5'} gap-5`}>
       {displayAreas.map((a) => (
-        <div
-          class="bg-white rounded-2xl p-5 border border-gray-200 shadow-sm hover:shadow-lg transition-all flex flex-col justify-between group hover:border-brand-teal"
+        <a
+          href={`/areas/${a.slug}/`}
+          class="bg-white rounded-2xl p-5 border border-gray-200 shadow-sm hover:shadow-lg transition-all flex flex-col justify-between group hover:border-brand-teal block"
         >
           <div>
             <div class="flex items-center justify-between mb-3">
@@ -56,13 +61,16 @@ const displayAreas = limit ? areas.slice(0, limit) : areas;
               <span>Avg Response: <strong>{a.responseTime}</strong></span>
             </p>
           </div>
-          <div class="text-[11px] font-bold text-brand-success flex items-center gap-1.5 pt-3 border-t border-gray-100">
-            <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-            </svg>
-            <span>Servicing Now</span>
+          <div class="text-[11px] font-bold text-brand-teal flex items-center justify-between pt-3 border-t border-gray-100 group-hover:text-brand-amber transition-colors">
+            <span class="flex items-center gap-1 text-brand-success">
+              <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+              </svg>
+              <span>Active</span>
+            </span>
+            <span>Details &rarr;</span>
           </div>
-        </div>
+        </a>
       ))}
     </div>
 

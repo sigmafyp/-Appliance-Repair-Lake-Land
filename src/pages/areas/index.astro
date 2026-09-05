@@ -9,14 +9,18 @@ const pageDescription = "We provide same-day appliance repair services across Po
 const areas = [
   { slug: 'downtown-lakeland', name: 'Downtown Lakeland', zip: '33801', responseTime: '30-60 mins', region: 'Central Lakeland', dedicatedTrucks: 3 },
   { slug: 'south-lakeland', name: 'South Lakeland', zip: '33813', responseTime: '45-60 mins', region: 'South Polk', dedicatedTrucks: 4 },
-  { slug: 'winter-haven', name: 'Winter Haven', zip: '33880', responseTime: '45-90 mins', region: 'East Polk', dedicatedTrucks: 2 },
-  { slug: 'plant-city', name: 'Plant City', zip: '33563', responseTime: '60-90 mins', region: 'West Polk', dedicatedTrucks: 2 },
-  { slug: 'auburndale', name: 'Auburndale', zip: '33823', responseTime: '45-75 mins', region: 'East Polk', dedicatedTrucks: 1 },
-  { slug: 'mulberry', name: 'Mulberry', zip: '33860', responseTime: '45-75 mins', region: 'South Polk', dedicatedTrucks: 1 },
-  { slug: 'bartow', name: 'Bartow', zip: '33830', responseTime: '60-90 mins', region: 'South Polk', dedicatedTrucks: 2 },
-  { slug: 'highland-city', name: 'Highland City', zip: '33846', responseTime: '30-60 mins', region: 'South Polk', dedicatedTrucks: 1 },
   { slug: 'dixieland-lakeland', name: 'Dixieland Lakeland', zip: '33803', responseTime: '30-45 mins', region: 'Central Lakeland', dedicatedTrucks: 2 },
   { slug: 'lake-morton-lakeland', name: 'Lake Morton Lakeland', zip: '33801', responseTime: '30-45 mins', region: 'Central Lakeland', dedicatedTrucks: 1 },
+  { slug: 'winter-haven', name: 'Winter Haven', zip: '33880', responseTime: '45-90 mins', region: 'East Polk', dedicatedTrucks: 3 },
+  { slug: 'auburndale', name: 'Auburndale', zip: '33823', responseTime: '45-75 mins', region: 'East Polk', dedicatedTrucks: 2 },
+  { slug: 'haines-city', name: 'Haines City', zip: '33844', responseTime: '45-75 mins', region: 'East Polk', dedicatedTrucks: 2 },
+  { slug: 'lake-wales', name: 'Lake Wales', zip: '33853', responseTime: '50-80 mins', region: 'East Polk', dedicatedTrucks: 2 },
+  { slug: 'davenport', name: 'Davenport', zip: '33837', responseTime: '45-75 mins', region: 'Northeast Polk', dedicatedTrucks: 3 },
+  { slug: 'polk-city', name: 'Polk City', zip: '33868', responseTime: '30-50 mins', region: 'North Polk', dedicatedTrucks: 2 },
+  { slug: 'plant-city', name: 'Plant City', zip: '33563', responseTime: '60-90 mins', region: 'West Polk', dedicatedTrucks: 2 },
+  { slug: 'mulberry', name: 'Mulberry', zip: '33860', responseTime: '45-75 mins', region: 'South Polk', dedicatedTrucks: 2 },
+  { slug: 'bartow', name: 'Bartow', zip: '33830', responseTime: '60-90 mins', region: 'South Polk', dedicatedTrucks: 2 },
+  { slug: 'highland-city', name: 'Highland City', zip: '33846', responseTime: '30-60 mins', region: 'South Polk', dedicatedTrucks: 1 },
 ];
 
 const regions = [...new Set(areas.map(a => a.region))];
@@ -98,11 +102,23 @@ const regions = [...new Set(areas.map(a => a.region))];
                   </div>
                 </div>
                 
-                <div class="text-sm font-bold text-brand-success flex items-center gap-2 pt-5 mt-4 border-t border-gray-100">
-                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-                  </svg>
-                  <span>Servicing Now</span>
+                <div class="pt-5 mt-4 border-t border-gray-100 flex items-center justify-between">
+                  <div class="text-xs font-bold text-brand-success flex items-center gap-1.5">
+                    <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                    </svg>
+                    <span>Servicing Now</span>
+                  </div>
+
+                  <a 
+                    href={`/areas/${a.slug}/`}
+                    class="text-xs font-bold text-brand-teal hover:text-brand-amber flex items-center gap-1 group-hover:translate-x-0.5 transition-transform"
+                  >
+                    <span>Area Details</span>
+                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                    </svg>
+                  </a>
                 </div>
               </div>
             ))}
