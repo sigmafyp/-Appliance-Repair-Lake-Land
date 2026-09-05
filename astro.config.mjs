@@ -5,7 +5,6 @@ import tailwindcss from '@tailwindcss/vite';
 export default defineConfig({
   site: 'https://appliancerepairlakelandfl.com',
   output: 'static',
-  trailingSlash: 'always',
   vite: {
     plugins: [tailwindcss()]
   }
