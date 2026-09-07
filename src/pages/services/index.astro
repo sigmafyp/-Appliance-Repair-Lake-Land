@@ -7,9 +7,28 @@ const pageTitle = "Our Appliance Repair Services | Lakeland Repair";
 const pageDescription = "Comprehensive appliance repair services in Lakeland, FL. We fix refrigerators, washers, dryers, ovens, and more. Same-day service available.";
 
 import ServicesGrid from '../../components/ServicesGrid.astro';
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://appliancerepairlakelandfl.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Appliance Services",
+      "item": "https://appliancerepairlakelandfl.com/services/"
+    }
+  ]
+};
 ---
 
-<BaseLayout title={pageTitle} description={pageDescription}>
+<BaseLayout title={pageTitle} description={pageDescription} schema={breadcrumbSchema}>
   
 
   <!-- Custom Services Hero -->

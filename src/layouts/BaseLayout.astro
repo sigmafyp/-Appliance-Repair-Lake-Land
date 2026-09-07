@@ -17,9 +17,9 @@ const baseLocalBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "HomeAndConstructionBusiness",
   "name": "Lakeland Repair",
-  "image": "https://lakelandappliancepro.com/images/hero-tech.jpg",
-  "@id": "https://lakelandappliancepro.com/#organization",
-  "url": "https://lakelandappliancepro.com",
+  "image": "https://appliancerepairlakelandfl.com/images/hero/hero-tech.jpg",
+  "@id": "https://appliancerepairlakelandfl.com/#organization",
+  "url": "https://appliancerepairlakelandfl.com",
   "telephone": "+18632780714",
   "priceRange": "$$",
   "address": {
@@ -32,7 +32,7 @@ const baseLocalBusinessSchema = {
   "geo": {
     "@type": "GeoCoordinates",
     "latitude": 28.0437,
-    "longitude": -81.956
+    "longitude": -81.9560
   },
   "openingHoursSpecification": [
     {
@@ -43,7 +43,7 @@ const baseLocalBusinessSchema = {
     }
   ],
   "areaServed": [
-    "Lakeland", "Winter Haven", "Plant City", "Auburndale", "Mulberry", "Bartow", "Polk County FL"
+    "Lakeland", "Winter Haven", "Plant City", "Auburndale", "Mulberry", "Bartow", "Haines City", "Davenport", "Polk City", "Lake Wales", "Polk County FL"
   ]
 };
 
@@ -59,7 +59,15 @@ const schemasToInject = schema
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/png" href="/favicon.png" />
     <meta name="generator" content={Astro.generator} />
+    <meta name="theme-color" content="#0F3B3E" />
     <meta name="google-site-verification" content="bF4gyH02OXrf9vM3q6VsG7qupdBMAFz_CH276APVwVA" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+
+    <!-- Geo / Local SEO Meta Tags -->
+    <meta name="geo.region" content="US-FL" />
+    <meta name="geo.placename" content="Lakeland, Polk County, Florida" />
+    <meta name="geo.position" content="28.0437;-81.9560" />
+    <meta name="ICBM" content="28.0437, -81.9560" />
 
     <!-- AOS Animation CSS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -69,12 +77,23 @@ const schemasToInject = schema
     <meta name="description" content={description} />
     <link rel="canonical" href={currentUrl} />
 
-    <!-- Open Graph -->
+    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={currentUrl} />
     <meta property="og:site_name" content="Lakeland Repair" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:image" content="https://appliancerepairlakelandfl.com/images/hero/hero-tech.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Lakeland Appliance Repair Service Technician" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content="https://appliancerepairlakelandfl.com/images/hero/hero-tech.jpg" />
 
     <!-- JSON-LD Schema Markup -->
     {schemasToInject.map((s) => (

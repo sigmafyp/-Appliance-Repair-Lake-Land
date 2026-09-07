@@ -63,9 +63,41 @@ const faqs = [
     answer: "Scheduling is immediate—simply call our local dispatch desk at (863) 278-0714. A technician coordinator will confirm your appliance symptoms and dispatch a specialist directly to your home."
   }
 ];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map(f => ({
+    "@type": "Question",
+    "name": f.question,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": f.answer
+    }
+  }))
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://appliancerepairlakelandfl.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "FAQ",
+      "item": "https://appliancerepairlakelandfl.com/faq/"
+    }
+  ]
+};
 ---
 
-<BaseLayout title={pageTitle} description={pageDescription}>
+<BaseLayout title={pageTitle} description={pageDescription} schema={[faqSchema, breadcrumbSchema]}>
   <!-- Custom FAQ Hero -->
   <section class="relative bg-brand-teal text-white overflow-hidden py-16 lg:py-24 border-b border-teal-800">
     <div class="absolute inset-0 bg-gradient-to-br from-brand-teal-dark to-brand-teal z-0"></div>

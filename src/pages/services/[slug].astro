@@ -46,10 +46,10 @@ const relatedServices = allServices
 const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
-  "name": repairTitle,
+  "name": `${repairTitle} in Lakeland, FL`,
   "provider": {
     "@type": "HomeAndConstructionBusiness",
-    "name": "Lakeland Appliance Pro"
+    "name": "Lakeland Repair"
   },
   "areaServed": "Lakeland & Polk County, FL",
   "description": shortDescription
@@ -67,9 +67,34 @@ const faqSchema = {
     }
   }))
 };
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://appliancerepairlakelandfl.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Services",
+      "item": "https://appliancerepairlakelandfl.com/services/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": repairTitle,
+      "item": `https://appliancerepairlakelandfl.com/services/${entry.id}/`
+    }
+  ]
+};
 ---
 
-<BaseLayout title={pageTitle} description={pageDescription} schema={[serviceSchema, faqSchema]}>
+<BaseLayout title={pageTitle} description={pageDescription} schema={[serviceSchema, faqSchema, breadcrumbSchema]}>
   
   <!-- Service Specific Hero -->
   <section class="bg-brand-teal text-white py-14 lg:py-24 relative overflow-hidden border-b border-teal-800">

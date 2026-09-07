@@ -63,9 +63,41 @@ const brandsSchema = {
   "areaServed": "Lakeland & Polk County, FL",
   "description": pageDescription
 };
+
+const brandFaqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": brandFaqs.map(f => ({
+    "@type": "Question",
+    "name": f.question,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": f.answer
+    }
+  }))
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://appliancerepairlakelandfl.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Brands Serviced",
+      "item": "https://appliancerepairlakelandfl.com/brands/"
+    }
+  ]
+};
 ---
 
-<BaseLayout title={pageTitle} description={pageDescription} schema={brandsSchema}>
+<BaseLayout title={pageTitle} description={pageDescription} schema={[brandsSchema, brandFaqSchema, breadcrumbSchema]}>
   <PageHeader 
     title="Major Appliance Brands We Service" 
     description="Certified master technicians equipped with genuine factory OEM parts for all major American and European appliance manufacturers." 

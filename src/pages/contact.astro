@@ -1,11 +1,30 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 
-const pageTitle = "Contact Us | Lakeland Appliance Pro";
-const pageDescription = "Get in touch with Lakeland Appliance Pro for same-day dispatch. Call (863) 278-0714 for immediate service.";
+const pageTitle = "Contact Us | Same-Day Appliance Repair Dispatch | Lakeland Repair";
+const pageDescription = "Get in touch with Lakeland Repair for same-day mobile dispatch across Polk County. Call (863) 278-0714 for immediate service.";
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://appliancerepairlakelandfl.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Contact Us",
+      "item": "https://appliancerepairlakelandfl.com/contact/"
+    }
+  ]
+};
 ---
 
-<BaseLayout title={pageTitle} description={pageDescription}>
+<BaseLayout title={pageTitle} description={pageDescription} schema={breadcrumbSchema}>
   
   <section class="bg-brand-teal text-white pt-16 pb-24 lg:pt-24 lg:pb-32 border-b border-teal-800 relative overflow-hidden">
     <div class="absolute inset-0 bg-gradient-to-br from-brand-teal-dark to-brand-teal z-0"></div>
