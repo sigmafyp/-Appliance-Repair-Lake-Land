@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHeader from '../components/PageHeader.astro';
 import CtaBanner from '../components/CtaBanner.astro';
 
 const teamMembers = [
@@ -35,24 +36,37 @@ const teamMembers = [
 
 const pageTitle = "Our Certified Technicians | Lakeland Repair";
 const pageDescription = "Meet the certified master technicians at Lakeland Repair serving Lakeland, Winter Haven, and Polk County.";
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://appliancerepairlakelandfl.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Our Team",
+      "item": "https://appliancerepairlakelandfl.com/team/"
+    }
+  ]
+};
 ---
 
-<BaseLayout title={pageTitle} description={pageDescription}>
+<BaseLayout title={pageTitle} description={pageDescription} schema={breadcrumbSchema}>
   
-  
-  <section class="bg-brand-teal text-white py-16 lg:py-20 border-b border-teal-800">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center max-w-3xl">
-      <span class="text-brand-amber text-xs font-bold uppercase tracking-widest bg-teal-800 px-3 py-1 rounded-full border border-teal-600">
-        Licensed Trade Specialists
-      </span>
-      <h1 class="text-4xl sm:text-5xl font-heading font-extrabold text-white tracking-tight mt-3">
-        Meet Our Master Technicians
-      </h1>
-      <p class="text-base text-teal-100/90 leading-relaxed font-normal mt-3">
-        Our team brings decades of combined factory-certified experience to every Polk County home visit.
-      </p>
-    </div>
-  </section>
+  <PageHeader 
+    badge="Licensed Trade Specialists"
+    title="Meet Our Master Technicians" 
+    description="Decades of combined factory-certified experience delivering prompt, professional in-home repair across Polk County." 
+    showPhoneCta={true}
+    secondaryBtnText="View Our Services"
+    secondaryBtnHref="/services/"
+  />
 
   <section class="py-16 sm:py-24 bg-white border-b border-gray-100">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

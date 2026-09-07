@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHeader from '../components/PageHeader.astro';
 import FaqAccordion from '../components/FaqAccordion.astro';
 
 const pageTitle = "Frequently Asked Questions | Lakeland Repair";
@@ -98,20 +99,14 @@ const breadcrumbSchema = {
 ---
 
 <BaseLayout title={pageTitle} description={pageDescription} schema={[faqSchema, breadcrumbSchema]}>
-  <!-- Custom FAQ Hero -->
-  <section class="relative bg-brand-teal text-white overflow-hidden py-16 lg:py-24 border-b border-teal-800">
-    <div class="absolute inset-0 bg-gradient-to-br from-brand-teal-dark to-brand-teal z-0"></div>
-    <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-brand-teal-light/20 rounded-full blur-3xl -mr-32 -mt-32 pointer-events-none z-0"></div>
-    
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-heading font-extrabold text-white tracking-tight mb-6">
-        Frequently Asked Questions
-      </h1>
-      <p class="text-xl text-teal-50/90 max-w-3xl mx-auto leading-relaxed">
-        Have questions about our Polk County appliance repair services? Find clear answers below.
-      </p>
-    </div>
-  </section>
+  <PageHeader 
+    badge="Help & Answers"
+    title="Frequently Asked Questions" 
+    description="Have questions about diagnostic pricing, warranty coverage, or response times in Polk County? Find clear answers below." 
+    showPhoneCta={true}
+    secondaryBtnText="Contact Dispatch"
+    secondaryBtnHref="/contact/"
+  />
 
   <FaqAccordion faqItems={faqs} title="" subtitle="" />
 </BaseLayout>

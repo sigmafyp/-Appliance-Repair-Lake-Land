@@ -2,23 +2,92 @@
 export interface Props {
   title: string;
   description?: string;
+  badge?: string;
+  badgeIcon?: string;
+  showPhoneCta?: boolean;
+  phoneText?: string;
+  phoneHref?: string;
+  secondaryBtnText?: string;
+  secondaryBtnHref?: string;
 }
 
-const { title, description } = Astro.props;
+const { 
+  title, 
+  description, 
+  badge,
+  badgeIcon,
+  showPhoneCta = false,
+  phoneText = "Call (863) 278-0714",
+  phoneHref = "tel:+18632780714",
+  secondaryBtnText,
+  secondaryBtnHref
+} = Astro.props;
 ---
 
-<section class="relative bg-brand-teal pt-28 pb-16 overflow-hidden">
-  <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] mix-blend-overlay"></div>
-  <div class="absolute inset-0 bg-gradient-to-br from-brand-teal via-teal-800 to-brand-teal-dark opacity-90"></div>
+<section class="relative bg-gradient-to-b from-brand-teal-dark via-brand-teal to-brand-teal-dark text-white py-16 sm:py-20 lg:py-24 border-b border-teal-800 overflow-hidden">
+  <!-- Subtle Background Ripple Texture Overlay -->
+  <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#F2994A_1px,transparent_1px)] [background-size:24px_24px] pointer-events-none"></div>
   
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-heading font-extrabold text-white tracking-tight mb-4 drop-shadow-md">
+  <!-- Soft Ambient Glow -->
+  <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-brand-teal-light/20 rounded-full blur-3xl -mr-32 -mt-32 pointer-events-none z-0"></div>
+  <div class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-brand-amber/10 rounded-full blur-3xl -ml-24 -mb-24 pointer-events-none z-0"></div>
+
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+    
+    <!-- Optional Badge -->
+    {badge && (
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-teal-800/80 border border-teal-600/50 text-brand-amber text-xs font-bold uppercase tracking-wider mb-6 shadow-sm">
+        {badgeIcon ? (
+          <span class="w-2 h-2 rounded-full bg-brand-success animate-pulse"></span>
+        ) : (
+          <svg class="w-4 h-4 text-brand-amber" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+          </svg>
+        )}
+        <span>{badge}</span>
+      </div>
+    )}
+
+    <!-- Unified Headline -->
+    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-heading font-extrabold text-white tracking-tight leading-tight mb-4">
       {title}
     </h1>
+
+    <!-- Unified Subhead Description -->
     {description && (
-      <p class="text-lg sm:text-xl text-teal-100 max-w-2xl mx-auto font-medium">
+      <p class="text-base sm:text-lg text-teal-100/90 max-w-2xl mx-auto font-normal leading-relaxed">
         {description}
       </p>
     )}
+
+    <!-- Optional Unified Action Buttons -->
+    {(showPhoneCta || secondaryBtnText) && (
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+        {showPhoneCta && (
+          <a
+            href={phoneHref}
+            class="inline-flex items-center justify-center px-8 py-4 rounded-full bg-brand-amber text-slate-900 font-extrabold text-base hover:bg-brand-amber-hover transition-all transform hover:-translate-y-0.5 shadow-xl group w-full sm:w-auto"
+          >
+            <svg class="w-5 h-5 mr-2.5 text-slate-900 group-hover:animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+            </svg>
+            {phoneText}
+          </a>
+        )}
+
+        {secondaryBtnText && secondaryBtnHref && (
+          <a
+            href={secondaryBtnHref}
+            class="inline-flex items-center justify-center px-7 py-4 rounded-full bg-teal-800/80 hover:bg-brand-teal-light border border-teal-600/60 text-white font-bold text-base transition-all transform hover:-translate-y-0.5 shadow-lg group w-full sm:w-auto"
+          >
+            {secondaryBtnText}
+            <svg class="w-4 h-4 ml-2 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+            </svg>
+          </a>
+        )}
+      </div>
+    )}
+
   </div>
 </section>

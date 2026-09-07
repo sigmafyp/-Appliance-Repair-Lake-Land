@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHeader from '../components/PageHeader.astro';
 
 const pageTitle = "Privacy Policy | Lakeland Repair";
 const pageDescription = "Privacy policy, data protection standards, and communications practices for Lakeland Repair.";
@@ -7,20 +8,11 @@ const pageDescription = "Privacy policy, data protection standards, and communic
 
 <BaseLayout title={pageTitle} description={pageDescription}>
   
-  <!-- Custom Legal Hero -->
-  <section class="relative bg-brand-teal text-white overflow-hidden py-16 lg:py-24 border-b border-teal-800">
-    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-teal-700/40 via-brand-teal-dark to-brand-teal-dark z-0"></div>
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-      <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-teal-800/80 border border-teal-600/50 text-teal-100 text-xs font-semibold tracking-wide uppercase mb-6">
-        <svg class="w-4 h-4 text-brand-amber" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
-        <span>Legal Documentation</span>
-      </div>
-      <h1 class="text-4xl sm:text-5xl font-heading font-extrabold text-white tracking-tight mb-4">
-        Privacy Policy
-      </h1>
-      <p class="text-teal-100/80 text-sm">Last Updated: September 2026</p>
-    </div>
-  </section>
+  <PageHeader 
+    badge="Legal Documentation"
+    title="Privacy Policy" 
+    description="Last Updated: September 2026 • Our commitment to customer data privacy and transparent communications across Polk County."
+  />
 
   <section class="py-16 sm:py-24 bg-brand-surface">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
