@@ -14,7 +14,7 @@ faq:
   - question: "Can you repair appliances in older Dixieland craftsman homes without outlet upgrades?"
     answer: "Our certified technicians safely test electrical wiring connections and adapt modern replacement units to existing outlets."
   - question: "What is the typical dispatch window for 33803?"
-    answer: "Because Dixieland is directly adjacent to our headquarters, response times are often under 45 minutes."
+    answer: "Because our mobile service units regularly service Dixieland and the South Florida Ave corridor, arrival times are typically between 30 and 45 minutes."
 ---
 # Historic Dixieland Appliance Repair in Lakeland, FL
 

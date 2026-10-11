@@ -8,8 +8,8 @@ export interface Props {
 }
 
 const {
-  heading = "Fast, Reliable Appliance Repair in Lakeland, FL",
-  subhead = "Polk County's most trusted experts for same-day home repairs. Restoring calm and efficiency to your kitchen and laundry room.",
+  heading = "Fast, Reliable Appliance Repair Near Me in Lakeland, FL",
+  subhead = "Polk County's most trusted experts for same-day appliance repair near you. Restoring calm and efficiency to your kitchen and laundry room with genuine OEM parts and a 90-day guarantee.",
   badgeText = "Polk County's Top Rated Local Technicians",
   image = "/images/hero/hero-tech.jpg",
   showBadges = true
@@ -70,23 +70,34 @@ const {
         <!-- 3 Inline Trust Badges -->
         {showBadges && (
           <div class="pt-6 grid grid-cols-1 sm:grid-cols-3 gap-3 border-t border-teal-800/80">
-            <div class="flex items-center space-x-2.5 text-xs text-teal-100">
-              <div class="w-6 h-6 rounded-full bg-brand-success/20 flex items-center justify-center text-brand-success flex-shrink-0">
+            <div class="flex items-center space-x-3 p-2.5 rounded-xl bg-teal-950/40 border border-teal-700/40 text-xs text-teal-100">
+              <div class="w-7 h-7 rounded-lg bg-emerald-500/20 border border-emerald-500/30 flex items-center justify-center text-emerald-400 font-bold flex-shrink-0">
                 ✓
               </div>
-              <span class="font-semibold">Licensed & Insured</span>
-            </div>
-            <div class="flex items-center space-x-2.5 text-xs text-teal-100">
-              <div class="w-6 h-6 rounded-full bg-brand-amber/20 flex items-center justify-center text-brand-amber flex-shrink-0">
-                ⚡
+              <div>
+                <span class="font-bold block text-white leading-tight">Licensed & Insured</span>
+                <span class="text-[10px] text-teal-300">FL State Certified</span>
               </div>
-              <span class="font-semibold">Same-Day Dispatch</span>
             </div>
-            <div class="flex items-center space-x-2.5 text-xs text-teal-100">
-              <div class="w-6 h-6 rounded-full bg-amber-400/20 flex items-center justify-center text-amber-300 flex-shrink-0">
+            <div class="flex items-center space-x-3 p-2.5 rounded-xl bg-teal-950/40 border border-teal-700/40 text-xs text-teal-100">
+              <div class="w-7 h-7 rounded-lg bg-brand-amber/20 border border-brand-amber/30 flex items-center justify-center text-brand-amber font-bold flex-shrink-0">
+                <svg class="w-4 h-4 text-brand-amber" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd"/>
+                </svg>
+              </div>
+              <div>
+                <span class="font-bold block text-white leading-tight">Same-Day Dispatch</span>
+                <span class="text-[10px] text-teal-300">Within 2–4 Hours</span>
+              </div>
+            </div>
+            <div class="flex items-center space-x-3 p-2.5 rounded-xl bg-teal-950/40 border border-teal-700/40 text-xs text-teal-100">
+              <div class="w-7 h-7 rounded-lg bg-amber-400/20 border border-amber-400/30 flex items-center justify-center text-amber-300 font-bold flex-shrink-0">
                 ★
               </div>
-              <span class="font-semibold">500+ 5-Star Reviews</span>
+              <div>
+                <span class="font-bold block text-white leading-tight">500+ Reviews</span>
+                <span class="text-[10px] text-teal-300">4.9 / 5.0 Star Rating</span>
+              </div>
             </div>
           </div>
         )}
@@ -94,31 +105,36 @@ const {
 
       <!-- Hero Visual Card -->
       <div class="lg:col-span-5 relative">
-        <div class="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-teal-700/50 bg-teal-900 group">
+        <div class="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-teal-700/50 bg-teal-900 group">
           <picture>
-
             <img
               src="/images/hero/hero-tech.jpg"
               alt="Lakeland Appliance Pro Certified Repair Technician at Work"
-              class="w-full h-80 lg:h-[420px] object-cover group-hover:scale-105 transition-transform duration-500"
+              class="w-full h-80 lg:h-[440px] object-cover group-hover:scale-105 transition-transform duration-700"
               fetchpriority="high"
               decoding="sync"
             />
           </picture>
-          <div class="absolute inset-0 bg-gradient-to-t from-brand-teal-dark via-transparent to-transparent opacity-80"></div>
+          <div class="absolute inset-0 bg-gradient-to-t from-brand-teal-dark via-brand-teal-dark/30 to-transparent opacity-90"></div>
           
-          <div class="absolute bottom-4 left-4 right-4 p-4 rounded-xl bg-brand-teal-dark/90 backdrop-blur border border-teal-700/60 shadow-lg text-xs">
-            <div class="flex items-center justify-between">
+          <!-- Top Floating OEM Badge -->
+          <div class="absolute top-4 right-4 px-3 py-1.5 rounded-full bg-slate-950/80 backdrop-blur-md border border-teal-500/40 text-[11px] font-bold text-teal-200 flex items-center gap-1.5 shadow-lg">
+            <span class="text-brand-amber font-mono font-extrabold">OEM</span> Factory Parts Stocked
+          </div>
+
+          <!-- Bottom Status Card -->
+          <div class="absolute bottom-4 left-4 right-4 p-4 rounded-2xl bg-brand-teal-dark/90 backdrop-blur-md border border-teal-600/50 shadow-xl text-xs">
+            <div class="flex items-center justify-between gap-3">
               <div>
-                <span class="text-brand-amber font-bold block text-sm">Lakeland Local Dispatch</span>
-                <span class="text-teal-200">Serving all 10 Polk County Communities</span>
+                <span class="text-brand-amber font-extrabold block text-sm tracking-tight">Lakeland Master Dispatch</span>
+                <span class="text-teal-200 text-[11px]">Direct coverage across all 10 Polk County areas</span>
               </div>
-              <div class="flex items-center space-x-1.5 bg-emerald-500/20 text-emerald-300 font-bold px-3 py-1.5 rounded-full text-[11px] border border-emerald-500/30">
+              <div class="flex items-center space-x-1.5 bg-emerald-500/20 text-emerald-300 font-bold px-3 py-1.5 rounded-full text-[11px] border border-emerald-500/30 shrink-0">
                 <span class="relative flex h-2 w-2">
                   <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
                   <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
                 </span>
-                <span>Available Today</span>
+                <span>Active Today</span>
               </div>
             </div>
           </div>

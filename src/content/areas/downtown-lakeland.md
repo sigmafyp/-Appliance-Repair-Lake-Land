@@ -12,7 +12,7 @@ neighborhoods:
   - "Lake Wire Fringe"
 faq:
   - question: "How fast can a technician reach Downtown Lakeland lofts?"
-    answer: "Because our central Lakeland headquarters is located right in 33801, our average response time to Downtown addresses is 30 to 45 minutes."
+    answer: "With mobile service vans staged daily across central Lakeland and zip code 33801, our average arrival window to Downtown addresses is 30 to 45 minutes."
   - question: "Do you service built-in appliances in Downtown historical homes?"
     answer: "Yes, our technicians are specially trained in retrofitting modern components into historic home cabinetry without damaging original woodwork."
   - question: "Are parking or high-rise access fees charged?"
