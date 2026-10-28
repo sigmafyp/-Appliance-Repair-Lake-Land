@@ -2,6 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import PageHeader from '../components/PageHeader.astro';
 import CtaBanner from '../components/CtaBanner.astro';
+import FaqAccordion from '../components/FaqAccordion.astro';
 
 const pageTitle = "Major Appliance Brands We Service | Lakeland & Polk County, FL";
 const pageDescription = "Certified repair service for Whirlpool, Sub-Zero, GE, Samsung, LG, Bosch, KitchenAid, Viking, Maytag, and more across Polk County. Call (863) 278-0714.";
@@ -176,29 +177,11 @@ const breadcrumbSchema = {
   </section>
 
   <!-- Brand FAQs -->
-  <section class="py-16 sm:py-24 bg-brand-surface border-b border-gray-100">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-12">
-        <span class="text-brand-amber font-bold tracking-widest uppercase text-xs">Questions & Answers</span>
-        <h2 class="text-3xl font-heading font-extrabold text-brand-teal mt-2">
-          Brand Service & Warranty FAQs
-        </h2>
-      </div>
-
-      <div class="space-y-4">
-        {brandFaqs.map((faq) => (
-          <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm">
-            <h3 class="text-base font-heading font-bold text-brand-teal-dark mb-2">
-              {faq.question}
-            </h3>
-            <p class="text-xs sm:text-sm text-brand-muted leading-relaxed">
-              {faq.answer}
-            </p>
-          </div>
-        ))}
-      </div>
-    </div>
-  </section>
+  <FaqAccordion
+    faqItems={brandFaqs}
+    title="Brand Service & Warranty FAQs"
+    subtitle="Frequently asked questions about manufacturer warranty coverage, certified technician credentials, and genuine OEM parts."
+  />
 
   <CtaBanner 
     headline="Have a Broken Brand Appliance in Polk County?"

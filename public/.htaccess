@@ -7,6 +7,9 @@
   RewriteEngine On
   RewriteBase /
 
+  # 0. Sitemap redirect: ensure /sitemap.xml redirects to /sitemap-index.xml
+  RewriteRule ^sitemap\.xml$ /sitemap-index.xml [R=301,L]
+
   # 1. Force HTTP to HTTPS Redirect
   RewriteCond %{HTTPS} off
   RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]

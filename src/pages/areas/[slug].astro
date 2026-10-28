@@ -21,6 +21,11 @@ const zipDisplay = Array.isArray(zip) ? zip.join(', ') : zip;
 const pageTitle = `Appliance Repair in ${title}, FL | Same-Day Service | Lakeland Repair`;
 const pageDescription = `Expert local appliance repair in ${title}, FL. Fast same-day service for refrigerators, washers, dryers, dishwashers, and ovens across ZIP ${zipDisplay}. Call (863) 278-0714.`;
 
+// Local specifics computation for first 100 words geo-locking
+const localSpecificsText = entry.id === 'highland-city'
+  ? 'Highland City Central, CR 540A, and the US 98 corridor in unincorporated Polk County, FL (between South Lakeland and Bartow)'
+  : (neighborhoods.length >= 2 ? `${neighborhoods[0]} and ${neighborhoods[1]}` : neighborhoods.join(', '));
+
 // Get other service areas for cross-linking
 const allAreas = await getCollection('areas');
 const otherAreas = allAreas.filter((a) => a.id !== entry.id).slice(0, 6);
@@ -128,7 +133,7 @@ const coreServices = [
           </h1>
 
           <p class="text-base sm:text-lg text-teal-100/95 leading-relaxed font-normal">
-            Looking for reliable appliance repair in {title}, FL? When household appliances break in {title}, you need prompt, honest service from licensed local tradespeople. We dispatch fully stocked repair vans throughout ZIP code(s) <strong class="text-white font-mono">{zipDisplay}</strong> for same-day diagnostics and upfront flat-rate quotes.
+            Need certified local appliance repair in <strong>{title}, FL</strong>? Our mobile service technicians are stationed directly in <strong>{title}</strong>, serving {localSpecificsText} across ZIP <strong class="text-white font-mono">{zipDisplay}</strong>. From emergency cooling restoration to precision <a href="/services/washer-repair/" class="text-teal-200 font-semibold underline hover:text-white">washing machine repair</a>, our licensed local tradespeople arrive in fully equipped vans with genuine OEM parts for same-day solutions.
           </p>
 
           <!-- Response time card -->
@@ -307,7 +312,7 @@ const coreServices = [
                 href={`/services/${service.slug}/`}
                 class="flex-1 text-center py-2.5 px-3 rounded-xl bg-teal-50 hover:bg-brand-teal hover:text-white text-brand-teal font-extrabold text-xs transition-all border border-teal-100/80 shadow-2xs flex items-center justify-center gap-1 group/btn"
               >
-                <span>Details</span>
+                <span>{service.baseName}</span>
                 <span class="group-hover/btn:translate-x-0.5 transition-transform">&rarr;</span>
               </a>
               <a 
@@ -326,6 +331,15 @@ const coreServices = [
     </div>
   </section>
 
+  <!-- Local Community Profile / Markdown Content -->
+  <section class="py-16 sm:py-20 bg-white border-b border-gray-100">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="prose prose-teal max-w-none text-brand-text leading-relaxed">
+        <Content />
+      </div>
+    </div>
+  </section>
+
   <!-- Local Area FAQ -->
   <FaqAccordion 
     faqItems={faq} 
@@ -333,12 +347,12 @@ const coreServices = [
     subtitle={`Common questions about in-home appliance repairs in ${title}, FL.`}
   />
 
-  <!-- Nearby Service Areas -->
+  <!-- Adjacent Polk County Communities We Serve -->
   <section class="py-14 bg-brand-surface border-b border-gray-100">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex flex-col sm:flex-row items-center justify-between gap-4 mb-6">
         <h3 class="text-base font-heading font-bold text-brand-teal-dark">
-          Other Service Areas Near {title}
+          Adjacent Polk County Communities We Serve
         </h3>
         <a href="/areas/" class="text-xs font-bold text-brand-teal hover:text-brand-amber flex items-center gap-1">
           View All Polk County Service Areas &rarr;
@@ -352,7 +366,7 @@ const coreServices = [
             class="p-3 bg-white rounded-xl border border-gray-200 text-center hover:border-brand-teal hover:shadow-md transition-all group"
           >
             <span class="text-xs font-bold text-brand-text group-hover:text-brand-teal block mb-1">
-              {area.data.title}
+              {area.data.title}, FL
             </span>
             <span class="text-[10px] text-brand-muted block">
               Avg {area.data.responseTime}

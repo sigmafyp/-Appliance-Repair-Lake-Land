@@ -9,14 +9,6 @@ const services = [
     features: ['Compressor replacement', 'Freon leak sealing', 'Temp calibration']
   },
   {
-    slug: 'freezer-repair',
-    name: 'Deep Freezer & Chest Freezer Repair',
-    description: 'Fast repair for frost buildup, click-on start relays, and temp fluctuations.',
-    icon: '❄️',
-    image: '/images/services/freezer-repair.jpg',
-    features: ['Defrost heater repair', 'Start relay replacement', 'Door seal fixing']
-  },
-  {
     slug: 'washer-repair',
     name: 'Washing Machine Repair & Diagnostics',
     description: 'Resolving spin cycle failures, standing water, violent vibration, and door locks.',
@@ -33,20 +25,20 @@ const services = [
     features: ['Heating element repair', 'Thermal fuse reset', 'Vent line clearing']
   },
   {
+    slug: 'dishwasher-repair',
+    name: 'Built-In Dishwasher Repair Service',
+    description: 'Fixing cloudy glassware, spray arm clogs, door latch leaks, and pump drains.',
+    icon: '🍽️',
+    image: '/images/services/dishwasher-repair.jpg',
+    features: ['Spray arm unclogging', 'Drain pump clearing', 'Latch sensor repair']
+  },
+  {
     slug: 'oven-range-repair',
     name: 'Oven, Stove & Cooking Range Repair',
     description: 'Calibrating uneven temperatures, faulty igniters, element burnt-outs, and control boards.',
     icon: '🍳',
     image: '/images/services/oven-range-repair.jpg',
     features: ['Gas igniter replacement', 'Bake element fixes', 'Control board repair']
-  },
-  {
-    slug: 'stove-repair',
-    name: 'Gas Burner & Electric Stove Repair',
-    description: 'Gas valve repairs, electric burner replacement, and spark module troubleshooting.',
-    icon: '⚡',
-    image: '/images/services/stove-repair.jpg',
-    features: ['Burner grate alignment', 'Spark module testing', 'Gas line safety']
   },
   {
     slug: 'cooktop-repair',
@@ -57,12 +49,12 @@ const services = [
     features: ['Induction coil fixes', 'Glass top polishing', 'Knob replacements']
   },
   {
-    slug: 'dishwasher-repair',
-    name: 'Built-In Dishwasher Repair Service',
-    description: 'Fixing cloudy glassware, spray arm clogs, door latch leaks, and pump drains.',
-    icon: '🍽️',
-    image: '/images/services/dishwasher-repair.jpg',
-    features: ['Spray arm unclogging', 'Drain pump clearing', 'Latch sensor repair']
+    slug: 'freezer-repair',
+    name: 'Deep Freezer & Chest Freezer Repair',
+    description: 'Fast repair for frost buildup, click-on start relays, and temp fluctuations.',
+    icon: '❄️',
+    image: '/images/services/freezer-repair.jpg',
+    features: ['Defrost heater repair', 'Start relay replacement', 'Door seal fixing']
   },
   {
     slug: 'microwave-repair',
@@ -189,11 +181,9 @@ const displayServices = limit ? services.slice(0, limit) : services;
 
     {limit && (
       <div class="text-center mt-12">
-        <a href="/services/" class="inline-flex items-center justify-center px-8 py-4 rounded-full bg-white border-2 border-slate-100 text-brand-teal font-extrabold text-base hover:bg-brand-teal hover:border-brand-teal hover:text-white transition-all duration-300 transform hover:-translate-y-1 shadow-lg hover:shadow-xl group relative overflow-hidden">
-          <span class="relative z-10 flex items-center">
-            View All Repair Services
-            <svg class="w-5 h-5 ml-2 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-          </span>
+        <a href="/services/" class="inline-flex items-center justify-center px-8 py-4 rounded-full bg-brand-teal hover:bg-brand-teal-dark text-white font-extrabold text-base transition-all duration-300 transform hover:-translate-y-1 shadow-lg hover:shadow-xl group">
+          <span>View All Services</span>
+          <svg class="w-5 h-5 ml-2 transition-transform duration-300 group-hover:translate-x-1 text-brand-amber" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
         </a>
       </div>
     )}
