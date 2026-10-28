@@ -36,24 +36,31 @@ const {
 
     <div class="space-y-4" id="faq-accordion-group">
       {faqItems.map((item, idx) => (
-        <div class="bg-brand-bg rounded-2xl border border-gray-200 overflow-hidden shadow-sm transition-all faq-item">
+        <div class="bg-brand-bg rounded-2xl border border-gray-200 overflow-hidden shadow-xs hover:border-teal-200/80 transition-colors faq-item">
           <button
             type="button"
-            class="w-full px-6 py-5 text-left font-heading font-bold text-base text-brand-text flex items-center justify-between focus:outline-none focus:ring-2 focus:ring-brand-teal faq-trigger group"
+            class="w-full px-6 py-5 text-left font-heading font-bold text-base text-brand-text flex items-center justify-between focus:outline-none focus:ring-2 focus:ring-brand-teal/40 faq-trigger group cursor-pointer select-none"
             aria-expanded="false"
             aria-controls={`faq-answer-${idx}`}
           >
             <span class="group-hover:text-brand-teal transition-colors pr-4">{item.question}</span>
-            <span class="w-8 h-8 rounded-full bg-white text-brand-teal flex items-center justify-center font-bold text-lg flex-shrink-0 shadow-sm transition-transform duration-300 icon-arrow">
-              +
+            <span class="w-8 h-8 rounded-full bg-white text-brand-teal border border-gray-100 flex items-center justify-center font-bold text-lg flex-shrink-0 shadow-xs transition-all duration-300 ease-out icon-arrow group-hover:scale-105">
+              <svg class="w-4 h-4 transition-transform duration-300 ease-out transform icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="12" y1="5" x2="12" y2="19"></line>
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+              </svg>
             </span>
           </button>
           
           <div
             id={`faq-answer-${idx}`}
-            class="faq-answer hidden px-6 pb-5 text-sm text-brand-muted leading-relaxed border-t border-gray-200/50 pt-3 bg-white"
+            class="faq-collapse border-t border-transparent"
           >
-            <p>{item.answer}</p>
+            <div class="faq-collapse-inner">
+              <div class="px-6 pb-5 text-sm text-brand-muted leading-relaxed pt-3 bg-white border-t border-gray-100">
+                <p>{item.answer}</p>
+              </div>
+            </div>
           </div>
         </div>
       ))}
@@ -62,26 +69,41 @@ const {
 </section>
 
 <script>
-  document.addEventListener('DOMContentLoaded', () => {
+  function setupFaqAccordions() {
     const accordionItems = document.querySelectorAll('.faq-item');
 
     accordionItems.forEach((item) => {
-      const trigger = item.querySelector('.faq-trigger');
-      const answer = item.querySelector('.faq-answer');
-      const arrow = item.querySelector('.icon-arrow');
+      const trigger = item.querySelector('.faq-trigger') as HTMLButtonElement | null;
+      const collapse = item.querySelector('.faq-collapse') as HTMLElement | null;
+      const arrow = item.querySelector('.icon-arrow') as HTMLElement | null;
+      const iconSvg = item.querySelector('.icon-svg') as SVGElement | null;
 
-      if (trigger && answer && arrow) {
+      if (trigger && collapse && arrow) {
+        if (trigger.dataset.faqBound === 'true') return;
+        trigger.dataset.faqBound = 'true';
+
         trigger.addEventListener('click', () => {
           const isOpen = trigger.getAttribute('aria-expanded') === 'true';
+          const nextState = !isOpen;
 
-          // Close all others if desired, or toggle current
-          trigger.setAttribute('aria-expanded', (!isOpen).toString());
-          answer.classList.toggle('hidden');
-          arrow.textContent = isOpen ? '+' : '−';
-          arrow.classList.toggle('bg-brand-amber');
-          arrow.classList.toggle('text-slate-900');
+          trigger.setAttribute('aria-expanded', nextState.toString());
+          
+          if (nextState) {
+            collapse.classList.add('is-open');
+            arrow.classList.add('bg-brand-amber', 'text-slate-900', 'border-amber-300');
+            arrow.classList.remove('bg-white', 'text-brand-teal', 'border-gray-100');
+            if (iconSvg) iconSvg.classList.add('rotate-45');
+          } else {
+            collapse.classList.remove('is-open');
+            arrow.classList.remove('bg-brand-amber', 'text-slate-900', 'border-amber-300');
+            arrow.classList.add('bg-white', 'text-brand-teal', 'border-gray-100');
+            if (iconSvg) iconSvg.classList.remove('rotate-45');
+          }
         });
       }
     });
-  });
+  }
+
+  document.addEventListener('DOMContentLoaded', setupFaqAccordions);
+  document.addEventListener('astro:page-load', setupFaqAccordions);
 </script>
